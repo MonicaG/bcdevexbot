@@ -18,7 +18,7 @@ def process(config):
     try:
         logger.info("Starting new issues bot")
         tweet = Tweet(config['twitter']['consumer_key'], config['twitter']['consumer_secret'],
-                                config['twitter']['access_token'], config['twitter']['access_token_secret'])
+                      config['twitter']['access_token'], config['twitter']['access_token_secret'])
         stored_issues = StoredIssues(config['file']['pickle_file'])
         seen_issues = stored_issues.get_seen_issues()
         issue_ids = []
