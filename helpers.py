@@ -1,9 +1,9 @@
 import pickle
+import requests
 import tweepy
 import logging
-import requests
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger()
 
 
 class StoredIssues:
@@ -65,7 +65,7 @@ class Tweet:
             over_length = tweet_length - Tweet._TWITTER_STATUS_LENGTH
             description = "{0} {1}{2}".format(stripped_prefix,
                                               stripped_title[
-                                                0:len(stripped_title) - over_length - len(Tweet._ELLIPSIS)],
+                                              0:len(stripped_title) - over_length - len(Tweet._ELLIPSIS)],
                                               Tweet._ELLIPSIS)
         status = "{0} {1} {2}".format(description, url, Tweet._HASH_TAG)
         logger.info(status)

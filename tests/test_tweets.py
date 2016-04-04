@@ -2,16 +2,18 @@
 Tests for the bot_tools.Tweet class
 """
 from unittest.mock import patch
-import tweepy
-from bcdevexbot import bot_tools
+
 import pytest
+import tweepy
+
+import helpers
 
 
 @pytest.fixture(scope="module")
 @patch('tweepy.API')
 def tweet(mock_tweepy):
     tweepy.API()
-    tweeter = bot_tools.Tweet("consumer_key", "consumer_secret", "access_token", "access_token_secret")
+    tweeter = helpers.Tweet("consumer_key", "consumer_secret", "access_token", "access_token_secret")
     assert mock_tweepy.called
     return tweeter
 
