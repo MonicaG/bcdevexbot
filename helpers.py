@@ -3,7 +3,7 @@ import requests
 import tweepy
 import logging
 
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
 
 
 class StoredIssues:

@@ -36,8 +36,7 @@ def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
                   body=tests.data.one_issue, status=200)
 
     mock_seen_issues.return_value = [101]
-    test_bot = bot.BCDeveloperExchangeBot(config_setup)
-    test_bot.process()
+    bot.process(config_setup)
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with([101])
@@ -53,8 +52,7 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
                   body=tests.data.one_issue, status=200)
 
     mock_seen_issues.return_value = [100]
-    test_bot = bot.BCDeveloperExchangeBot(config_setup)
-    test_bot.process()
+    bot.process(config_setup)
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with([101])
@@ -71,8 +69,7 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
                   body=tests.data.two_issues, status=200)
 
     mock_seen_issues.return_value = [100]
-    test_bot = bot.BCDeveloperExchangeBot(config_setup)
-    test_bot.process()
+    bot.process(config_setup)
 
     assert mock_seen_issues.called
     calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
@@ -93,8 +90,7 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
                   body=tests.data.two_issues, status=200)
 
     mock_seen_issues.return_value = [101]
-    test_bot = bot.BCDeveloperExchangeBot(config_setup)
-    test_bot.process()
+    bot.process(config_setup)
 
     assert mock_seen_issues.called
     mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
@@ -111,8 +107,7 @@ def test_no_issues(mock_save_issues, mock_seen_issues, mock_tweet, config_setup)
                   body=tests.data.no_issues, status=200)
 
     mock_seen_issues.return_value = []
-    test_bot = bot.BCDeveloperExchangeBot(config_setup)
-    test_bot.process()
+    bot.process(config_setup)
 
     assert mock_seen_issues.called
     mock_tweet.assert_not_called
@@ -128,8 +123,7 @@ def test_could_not_get_data(mock_save_issues, mock_seen_issues, mock_tweet, conf
                   json={"error": "not found"}, status=404)
 
     with pytest.raises(ConnectionError):
-        test_bot = bot.BCDeveloperExchangeBot(config_setup)
-        test_bot.process()
+        bot.process(config_setup)
         mock_seen_issues.assert_not_called
         mock_tweet.assert_not_called
         mock_save_issues.assert_not_called
@@ -145,8 +139,7 @@ def test_bad_config(mock_save_issues, mock_seen_issues, mock_tweet):
     config['file'] = {'pickle_file': 'issues.pickle'}
 
     with pytest.raises(KeyError):
-        test_bot = bot.BCDeveloperExchangeBot(config)
-        test_bot.process()
+        bot.process(config)
         mock_seen_issues.assert_not_called
         mock_tweet.assert_not_called
         mock_save_issues.assert_not_called
