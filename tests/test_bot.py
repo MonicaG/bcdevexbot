@@ -143,3 +143,55 @@ def test_bad_config(mock_save_issues, mock_seen_issues, mock_tweet):
         mock_seen_issues.assert_not_called
         mock_tweet.assert_not_called
         mock_save_issues.assert_not_called
+
+
+@responses.activate
+@patch('bot.Tweet.tweet_new_issue')
+@patch('bot.StoredIssues.get_seen_issues')
+@patch('bot.StoredIssues.save_issues')
+def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
+    """Test scenario: First issue has an exception while tweeting, second issue tweets successfully
+    Expected results: Second issue is processed and its id is stored.  First issue's id is not stored.
+    """
+    responses.add(responses.GET, api_url,
+                  body=tests.data.two_issues, status=200)
+
+    mock_seen_issues.return_value = []
+    mock_tweet.side_effect = tweeting_raises_exception_side_effect
+    bot.process(config_setup)
+
+    assert mock_seen_issues.called
+    calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
+                  'Favourites Tree Threshold Limit Break'),
+             call('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
+                  'Upgrade WP Sage Core Commenting - Part Three - Load More')
+             ]
+    mock_tweet.assert_has_calls(calls)
+    mock_save_issues.assert_called_once_with([102])
+
+
+def tweeting_raises_exception_side_effect(*args, **kwargs):
+    if args[0] == 'https://github.com/bcgov/bc-laws-api/issues/4':
+        raise Exception('Boom')
+    else:
+        return None
+
+
+@responses.activate
+@patch('bot.Tweet.tweet_new_issue')
+@patch('bot.StoredIssues.get_seen_issues')
+@patch('bot.StoredIssues.save_issues')
+def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
+    """Test scenario: First issue is new and tweeted successfully.  The second issue has bad data (the id is missing)
+        Expected results: First issue's id is stored, but second one is not.  Third issue is not processed.
+    """
+    responses.add(responses.GET, api_url,
+                  body=tests.data.missing_id, status=200)
+
+    mock_seen_issues.return_value = []
+    with pytest.raises(KeyError):
+        bot.process(config_setup)
+        assert mock_seen_issues.called
+        mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
+                                           'Upgrade WP Sage Core Commenting - Part Three - Load More')
+        mock_save_issues.assert_called_once_with([101])

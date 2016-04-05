@@ -26,8 +26,8 @@ class StoredIssues:
             with open(self._file_name, 'rb') as f:
                 seen_issues = pickle.load(f)
         except FileNotFoundError:
-            logger.debug("Could not find file ", self._file_name)
-            seen_issues = ()
+            logger.exception("Could not find the file " + self._file_name)
+            raise
         return seen_issues
 
 
@@ -49,6 +49,7 @@ class Tweet:
     def tweet_new_issue(self, url, title):
         status = self._create_status(url, title, "New issue:")
         self._api.update_status(status)
+        logger.info("Tweeted " + status)
 
     def _create_status(self, url, title, prefix):
         """
@@ -68,7 +69,6 @@ class Tweet:
                                               0:len(stripped_title) - over_length - len(Tweet._ELLIPSIS)],
                                               Tweet._ELLIPSIS)
         status = "{0} {1} {2}".format(description, url, Tweet._HASH_TAG)
-        logger.info(status)
         return status
 
 
