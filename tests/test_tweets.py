@@ -30,13 +30,16 @@ def test_status_creation_under_max_status_length(tweet):
 
 
 def test_status_creation_over_max_status_length(tweet):
+    title = ('A very long title that will exceed twitter\'s max length. In order to do this I need to write many, '
+             'many words. But that is okay, can just keep typing.')
+
     status = tweet._create_status('http://example.org',
-                                  '''A very long title that will exceed twitter\'s max length. In order to do this I need to write many, many words.
-                                  But that is okay, can just keep typing.''',
+                                  title,
                                   'New Issue: '
                                   )
 
-    expected = "New Issue: A very long title that will exceed twitter\'s max length. In order to do this I need to write ma... http://example.org #BCDev"
+    expected = ('New Issue: A very long title that will exceed twitter\'s max length. '
+                'In order to do this I need to write ma... http://example.org #BCDev')
     assert expected == status
 
 
@@ -48,7 +51,8 @@ def test_status_creation_equals_max_status_length(tweet):
                                   ' 140 characters long. 1 2 3 4 5',
                                   'New Issue: '
                                   )
-    expected = "New Issue: Here is a title. We need enough characters to make a status exactly 140 characters long. 1 2 3 4 5 http://example.org/1234 #BCDev"
+    expected = ('New Issue: Here is a title. We need enough characters to make a status exactly 140 characters long. '
+                '1 2 3 4 5 http://example.org/1234 #BCDev')
     assert expected == status
     assert tweet._TWITTER_STATUS_LENGTH == len(status)
 
@@ -61,7 +65,8 @@ def test_status_creation_1_char_longer_max_status_length(tweet):
                                   'Extra characters 1',
                                   'New Issue: '
                                   )
-    expected = "New Issue: Here is a title. We need enough characters to make a status 141 characters long. Extra characte... http://example.org/1234 #BCDev"
+    expected = ('New Issue: Here is a title. We need enough characters to make a status 141 characters long. '
+                'Extra characte... http://example.org/1234 #BCDev')
 
     assert expected == status
     assert tweet._TWITTER_STATUS_LENGTH == len(status)
