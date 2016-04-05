@@ -38,7 +38,7 @@ def process(config):
             else:
                 issue_ids.append(issue_id)
     except Exception:
-        logger.exception("Error processing response.  May not have processed all the issues.")
+        logger.exception("Error processing response data.")
         raise
     finally:
         stored_issues.save_issues(issue_ids)
