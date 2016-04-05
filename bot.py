@@ -7,6 +7,7 @@ import logging.config
 import os
 import sys
 import yaml
+import argparse
 from helpers import StoredIssues, Tweet, BCDevExchangeIssues
 
 logger = logging.getLogger(__name__)
@@ -56,15 +57,16 @@ def setup_logging(config):
 
 
 if __name__ == '__main__':
+    arg_parser = argparse.ArgumentParser(description=('Calls the BC Developer Exchange API and tweets any issues '
+                                                      'added since the last time this process ran.')
+                                         )
+    arg_parser.add_argument('config_file', help='Contains the configuration needed to run this bot')
+    args = arg_parser.parse_args()
+    bot_config = configparser.ConfigParser()
+    bot_config.read_file(open(args.config_file))
     try:
-        input_file = sys.argv[1]
-        bot_config = configparser.ConfigParser()
-        bot_config.read_file(open(input_file))
         setup_logging(bot_config)
         process(bot_config)
-    except IndexError:
-        print("Usage bot.py configFile.ini")
-        sys.exit(1)
     except Exception:
-        logger.exception("Exception from bot run.")
+        logger.exception("Bot encountered an exception during its run.")
         sys.exit(1)
