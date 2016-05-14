@@ -13,7 +13,7 @@ import bot
 import tests.data
 from bcdevexbot import models
 
-api_url = models.BCDevExchangeIssues._URL
+api_url = models.BCDevExchangeIssues.URL
 
 
 @pytest.fixture(scope="module")

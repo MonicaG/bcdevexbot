@@ -6,7 +6,7 @@ import responses
 import tests.data
 from bcdevexbot import models
 
-api_url = models.BCDevExchangeIssues._URL
+api_url = models.BCDevExchangeIssues.URL
 
 @responses.activate
 def test_connection_issue():

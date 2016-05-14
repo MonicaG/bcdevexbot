@@ -14,10 +14,10 @@ logger = logging.getLogger(__name__)
 class Twitter:
     """ Class for interacting with the Tweepy API and formatting twitter statuses. """
 
-    _HASH_TAG = "#BCDev"
-    _TWITTER_STATUS_LENGTH = 140
-    _DEFAULT_TWITTER_URL_LENGTH = 23
-    _ELLIPSIS = "..."
+    HASH_TAG = "#BCDev"
+    TWITTER_STATUS_LENGTH = 140
+    DEFAULT_TWITTER_URL_LENGTH = 23
+    ELLIPSIS = "..."
 
     def __init__(self, twitter_credentials, twitter_config_store):
         auth = tweepy.OAuthHandler(twitter_credentials['consumer_key'], twitter_credentials['consumer_secret'])
@@ -42,14 +42,14 @@ class Twitter:
         description = "{0} {1}".format(stripped_prefix, stripped_title)
         formatting_spaces = 2
         url_length = self.get_url_length(url)
-        tweet_length = len(description) + url_length + len(Twitter._HASH_TAG) + formatting_spaces
-        if tweet_length > Twitter._TWITTER_STATUS_LENGTH:
-            over_length = tweet_length - Twitter._TWITTER_STATUS_LENGTH
+        tweet_length = len(description) + url_length + len(Twitter.HASH_TAG) + formatting_spaces
+        if tweet_length > Twitter.TWITTER_STATUS_LENGTH:
+            over_length = tweet_length - Twitter.TWITTER_STATUS_LENGTH
             description = "{0} {1}{2}".format(stripped_prefix,
                                               stripped_title[
-                                              0:len(stripped_title) - over_length - len(Twitter._ELLIPSIS)],
-                                              Twitter._ELLIPSIS)
-        status = "{0} {1} {2}".format(description, url, Twitter._HASH_TAG)
+                                              0:len(stripped_title) - over_length - len(Twitter.ELLIPSIS)],
+                                              Twitter.ELLIPSIS)
+        status = "{0} {1} {2}".format(description, url, Twitter.HASH_TAG)
         return status
 
     def get_url_length(self, url):
@@ -58,7 +58,7 @@ class Twitter:
         If it cannot be retrieved then a default value is used.
         See reset_twitter_config method
         """
-        url_length = Twitter._DEFAULT_TWITTER_URL_LENGTH
+        url_length = Twitter.DEFAULT_TWITTER_URL_LENGTH
         str_url = str(url).lower()
         if str_url.startswith('http://'):
             url_length = self.get_short_url_length()
@@ -76,7 +76,7 @@ class Twitter:
 
     def _get_url_length_from_config(self, key_value):
         self._load_twitter_config()
-        url_length = Twitter._DEFAULT_TWITTER_URL_LENGTH
+        url_length = Twitter.DEFAULT_TWITTER_URL_LENGTH
         try:
             url_length = self._twitter_config[key_value]
         except KeyError:
@@ -100,13 +100,13 @@ class Twitter:
 class BCDevExchangeIssues:
     """ Class for interacting with the BC Developer Exchange API """
 
-    _URL = 'https://bcdevexchange.org/api/issues'
+    URL = 'https://bcdevexchange.org/api/issues'
 
     def __init__(self):
-        response = requests.get(BCDevExchangeIssues._URL)
+        response = requests.get(BCDevExchangeIssues.URL)
         if response.status_code == requests.codes.ok:
-            self.data = response.json()['issues']
-            self.index = 0
+            self._data = response.json()['issues']
+            self._index = 0
         else:
             raise ConnectionError(
                 "Error connecting. Status Code: {0} . Reason: {1}".format(response.status_code, response.reason))
@@ -115,10 +115,10 @@ class BCDevExchangeIssues:
         return self
 
     def __next__(self):
-        if self.index == len(self.data):
+        if self._index == len(self._data):
             raise StopIteration
-        issue = self.data[self.index]
-        self.index += 1
+        issue = self._data[self._index]
+        self._index += 1
         return issue['id'], issue['html_url'], issue['title']
 
 

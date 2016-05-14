@@ -76,7 +76,7 @@ def test_status_creation_equals_max_status_length(mock_twitter_config, tweet):
     expected = ('New Issue: Here is a title. We need enough characters to make a status exactly 140 characters '
                 'long. 1234567890ab http://example.org/1 #BCDev')
     assert expected == status
-    assert tweet. _TWITTER_STATUS_LENGTH == len(status)
+    assert tweet. TWITTER_STATUS_LENGTH == len(status)
     mock_twitter_config.assert_called_once_with()
 
 
@@ -94,7 +94,7 @@ def test_status_creation_1_char_longer_max_status_length(mock_twitter_config, tw
     expected = ('New Issue: Here is a title. We need enough characters to make a status 141 characters long. '
                 'Extra characters ... http://example.org/1 #BCDev')
 
-    assert tweet. _TWITTER_STATUS_LENGTH == len(status)
+    assert tweet.TWITTER_STATUS_LENGTH == len(status)
     assert expected == status
     mock_twitter_config.assert_called_once_with()
 
@@ -112,7 +112,7 @@ def test_multiple_calls_to_update_status(mock_twitter_config, tweet):
 @patch('bcdevexbot.persistence.DataStore.get')
 def test_url_length_config_not_found(mock_twitter_config, tweet):
     mock_twitter_config.return_value = {}
-    assert tweet._DEFAULT_TWITTER_URL_LENGTH == tweet.get_short_url_length()
+    assert tweet.DEFAULT_TWITTER_URL_LENGTH == tweet.get_short_url_length()
 
 
 @patch('bcdevexbot.persistence.DataStore.get')
@@ -127,7 +127,7 @@ def test_https_link(mock_twitter_config, tweet):
 def test_missing_protocol_link(mock_twitter_config, tweet):
     mock_twitter_config.return_value = TWITTER_CONFIG
     url_length = tweet.get_url_length("www.example.com")
-    assert tweet._DEFAULT_TWITTER_URL_LENGTH == url_length
+    assert tweet.DEFAULT_TWITTER_URL_LENGTH == url_length
 
 
 @patch('bcdevexbot.persistence.DataStore.get')
