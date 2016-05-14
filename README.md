@@ -22,9 +22,9 @@ access_token = yyyy
 access_token_secret = zzzz
 
 [file]
-pickle_file = ~/bcdevexbot/data/issues.pickle
-twitter_help_config = ~/bcdevexbot/data/twitter_help_config.pickle
-logging_config = ~/bcdevexbot/config/logging.yaml
+pickle_file = /path/to/file/issues.pickle
+twitter_help_config = /path/to/file/twitter_help_config.pickle
+logging_config = /path/to/file/config/logging.yaml
 ```
 
 ## Disclaimer
