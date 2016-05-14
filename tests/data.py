@@ -1,6 +1,5 @@
-"""
-test responses for the BCDevExchange API calls
-"""
+""" Test responses for the BCDevExchange API calls """
+
 no_issues = '{"issues": []}'
 
 one_issue = r'''{

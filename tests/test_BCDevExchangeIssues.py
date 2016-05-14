@@ -1,14 +1,12 @@
-"""
-test the bot_tools.BCDevExchangeIssues class
-"""
+""" Test the BCDevExchangeIssues class """
 
 import pytest
 import responses
 
-import helpers
 import tests.data
+from bcdevexbot import models
 
-api_url = helpers.BCDevExchangeIssues._URL
+api_url = models.BCDevExchangeIssues._URL
 
 @responses.activate
 def test_connection_issue():
@@ -16,14 +14,14 @@ def test_connection_issue():
                   json={"error": "not found"}, status=404)
 
     with pytest.raises(ConnectionError):
-        helpers.BCDevExchangeIssues()
+        models.BCDevExchangeIssues()
 
 
 @responses.activate
 def test_no_issues():
     responses.add(responses.GET, api_url,
                   body=tests.data.no_issues, status=200)
-    open_issues = helpers.BCDevExchangeIssues()
+    open_issues = models.BCDevExchangeIssues()
     with pytest.raises(StopIteration):
         open_issues.__next__()
 
@@ -32,7 +30,7 @@ def test_no_issues():
 def test_one_issue():
     responses.add(responses.GET, api_url,
                   body=tests.data.one_issue, status=200)
-    open_issues = helpers.BCDevExchangeIssues()
+    open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == 101
     assert url == 'https://github.com/bcgov/bc-laws-api/issues/4'
@@ -46,7 +44,7 @@ def test_one_issue():
 def test_two_issues():
     responses.add(responses.GET, api_url,
                   body=tests.data.two_issues, status=200)
-    open_issues = helpers.BCDevExchangeIssues()
+    open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == 101
     assert url == 'https://github.com/bcgov/bc-laws-api/issues/4'

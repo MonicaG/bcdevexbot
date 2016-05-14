@@ -10,10 +10,10 @@ import pytest
 import responses
 
 import bot
-import helpers
 import tests.data
+from bcdevexbot import models
 
-api_url = helpers.BCDevExchangeIssues._URL
+api_url = models.BCDevExchangeIssues._URL
 
 
 @pytest.fixture(scope="module")
@@ -23,20 +23,22 @@ def config_setup():
                          'consumer_secret': 'cs',
                          'access_token': 'at',
                          'access_token_secret': 'ats'}
-    config['file'] = {'pickle_file': 'issues.pickle'}
+    config['file'] = {'pickle_file': 'issues.pickle',
+                      'twitter_help_config': 'twitter_help_config.pickle'}
     return config
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   body=tests.data.one_issue, status=200)
 
     mock_seen_issues.return_value = [101]
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with([101])
@@ -44,15 +46,16 @@ def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   body=tests.data.one_issue, status=200)
 
     mock_seen_issues.return_value = [100]
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with([101])
@@ -61,15 +64,16 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   body=tests.data.two_issues, status=200)
 
     mock_seen_issues.return_value = [100]
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
@@ -82,15 +86,16 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   body=tests.data.two_issues, status=200)
 
     mock_seen_issues.return_value = [101]
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
@@ -99,15 +104,16 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_no_issues(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   body=tests.data.no_issues, status=200)
 
     mock_seen_issues.return_value = []
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     mock_tweet.assert_not_called
@@ -115,40 +121,42 @@ def test_no_issues(mock_save_issues, mock_seen_issues, mock_tweet, config_setup)
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_could_not_get_data(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     responses.add(responses.GET, api_url,
                   json={"error": "not found"}, status=404)
 
     with pytest.raises(ConnectionError):
-        bot.process(config_setup)
+        twitter_bot = bot.BCDevExBot(config_setup)
+        twitter_bot.process()
         mock_seen_issues.assert_not_called
         mock_tweet.assert_not_called
         mock_save_issues.assert_not_called
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_bad_config(mock_save_issues, mock_seen_issues, mock_tweet):
     config = configparser.ConfigParser()
     config['twitter'] = {}
-    config['file'] = {'pickle_file': 'issues.pickle'}
+    config['file'] = {'pickle_file': 'issues.pickle', 'twitter_help_config': 'config.pickle'}
 
     with pytest.raises(KeyError):
-        bot.process(config)
+        twitter_bot = bot.BCDevExBot(config)
+        twitter_bot.process()
         mock_seen_issues.assert_not_called
         mock_tweet.assert_not_called
         mock_save_issues.assert_not_called
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     """Test scenario: First issue has an exception while tweeting, second issue tweets successfully
     Expected results: Second issue is processed and its id is stored.  First issue's id is not stored.
@@ -158,7 +166,8 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
 
     mock_seen_issues.return_value = []
     mock_tweet.side_effect = tweeting_raises_exception_side_effect
-    bot.process(config_setup)
+    twitter_bot = bot.BCDevExBot(config_setup)
+    twitter_bot.process()
 
     assert mock_seen_issues.called
     calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
@@ -178,9 +187,9 @@ def tweeting_raises_exception_side_effect(*args, **kwargs):
 
 
 @responses.activate
-@patch('bot.Tweet.tweet_new_issue')
-@patch('bot.StoredIssues.get_seen_issues')
-@patch('bot.StoredIssues.save_issues')
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
 def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     """Test scenario: First issue is new and tweeted successfully.  The second issue has bad data (the id is missing)
         Expected results: First issue's id is stored, but second one is not.  Third issue is not processed.
@@ -190,7 +199,8 @@ def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config
 
     mock_seen_issues.return_value = []
     with pytest.raises(KeyError):
-        bot.process(config_setup)
+        twitter_bot = bot.BCDevExBot(config_setup)
+        twitter_bot.process()
         assert mock_seen_issues.called
         mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
                                            'Upgrade WP Sage Core Commenting - Part Three - Load More')
