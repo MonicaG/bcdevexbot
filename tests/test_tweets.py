@@ -45,17 +45,23 @@ def test_status_creation_under_max_status_length(mock_twitter_config, tweet):
 
 @patch('bcdevexbot.persistence.DataStore.get')
 def test_status_creation_over_max_status_length(mock_twitter_config, tweet, ):
+    url = 'http://example.org/1'
+    # make the url length the same length as used in the tweet composition calculation.  This is just a hack for this
+    # test so we can use the len(status) test below and have it equal the correct amount. So, I've magically made the
+    # url to be the same length as the config url length value.
+    assert URL_LENGTH == len(url)
     mock_twitter_config.return_value = TWITTER_CONFIG
     title = ('A very long title that will exceed twitter\'s max length. In order to do this I need to write many, '
              'many words. But that is okay, can just keep typing.')
 
-    status = tweet._create_status('http://example.org',
+    status = tweet._create_status(url,
                                   title,
                                   'New Issue: '
                                   )
 
-    expected = ('New Issue: A very long title that will exceed twitter\'s max length. '
-                'In order to do this I need to write many,... http://example.org #BCDev')
+    assert tweet.TWITTER_STATUS_LENGTH == len(status)
+    expected = ('New Issue: A very long title that will exceed twitter\'s max length. In order to do this I need to '
+                'write many, m\u2026 http://example.org/1 #BCDev')
     assert expected == status
     mock_twitter_config.assert_called_once_with()
 
@@ -63,9 +69,7 @@ def test_status_creation_over_max_status_length(mock_twitter_config, tweet, ):
 @patch('bcdevexbot.persistence.DataStore.get')
 def test_status_creation_equals_max_status_length(mock_twitter_config, tweet):
     url = 'http://example.org/1'
-    # make the url length the same length as used in the tweet composition calculation.  This is just a hack for this
-    # test so we can use the len(status) test below and have it equal the correct amount. So, I've magically made the
-    # url to be the same length as the config url length value.
+    # see comment in above test on why the url length needs to be a certain length
     assert URL_LENGTH == len(url)
     mock_twitter_config.return_value = TWITTER_CONFIG
     status = tweet._create_status(url,
@@ -76,7 +80,7 @@ def test_status_creation_equals_max_status_length(mock_twitter_config, tweet):
     expected = ('New Issue: Here is a title. We need enough characters to make a status exactly 140 characters '
                 'long. 1234567890ab http://example.org/1 #BCDev')
     assert expected == status
-    assert tweet. TWITTER_STATUS_LENGTH == len(status)
+    assert tweet.TWITTER_STATUS_LENGTH == len(status)
     mock_twitter_config.assert_called_once_with()
 
 
@@ -92,7 +96,7 @@ def test_status_creation_1_char_longer_max_status_length(mock_twitter_config, tw
                                   'New Issue: '
                                   )
     expected = ('New Issue: Here is a title. We need enough characters to make a status 141 characters long. '
-                'Extra characters ... http://example.org/1 #BCDev')
+                'Extra characters 12\u2026 http://example.org/1 #BCDev')
 
     assert tweet.TWITTER_STATUS_LENGTH == len(status)
     assert expected == status

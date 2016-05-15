@@ -17,7 +17,7 @@ class Twitter:
     HASH_TAG = "#BCDev"
     TWITTER_STATUS_LENGTH = 140
     DEFAULT_TWITTER_URL_LENGTH = 23
-    ELLIPSIS = "..."
+    ELLIPSIS = u"\u2026"
 
     def __init__(self, twitter_credentials, twitter_config_store):
         auth = tweepy.OAuthHandler(twitter_credentials['consumer_key'], twitter_credentials['consumer_secret'])
@@ -45,10 +45,8 @@ class Twitter:
         tweet_length = len(description) + url_length + len(Twitter.HASH_TAG) + formatting_spaces
         if tweet_length > Twitter.TWITTER_STATUS_LENGTH:
             over_length = tweet_length - Twitter.TWITTER_STATUS_LENGTH
-            description = "{0} {1}{2}".format(stripped_prefix,
-                                              stripped_title[
-                                              0:len(stripped_title) - over_length - len(Twitter.ELLIPSIS)],
-                                              Twitter.ELLIPSIS)
+            description = "{0}{1}".format(description[0:len(description) - over_length - len(Twitter.ELLIPSIS)],
+                                          Twitter.ELLIPSIS)
         status = "{0} {1} {2}".format(description, url, Twitter.HASH_TAG)
         return status
 
@@ -124,6 +122,7 @@ class BCDevExchangeIssues:
 
 class Base:
     """Base class for scripts needing to setup Twitter class and logging"""
+
     def __init__(self, config):
         self.config = config
 
