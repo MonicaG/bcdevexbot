@@ -4,7 +4,7 @@
 
 This is the code base for the [@bcdevexbot](https://twitter.com/bcdevexbot) twitter bot. 
 
-The bot calls the [https://bcdevexchange.org/api/issues](https://bcdevexchange.org/api/issues) API and tweets any issues that have been added since the last time the bot ran.
+The bot calls the [https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/](https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/) API and tweets any issues that have been added since the last time the bot ran.
 
 Two processes make up the bot:
 

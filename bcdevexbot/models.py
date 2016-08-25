@@ -98,12 +98,12 @@ class Twitter:
 class BCDevExchangeIssues:
     """ Class for interacting with the BC Developer Exchange API """
 
-    URL = 'https://bcdevexchange.org/api/issues'
+    URL = 'https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/'
 
     def __init__(self):
         response = requests.get(BCDevExchangeIssues.URL)
         if response.status_code == requests.codes.ok:
-            self._data = response.json()['issues']
+            self._data = response.json()['open']
             self._index = 0
         else:
             raise ConnectionError(

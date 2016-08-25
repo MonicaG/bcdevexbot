@@ -33,8 +33,8 @@ def test_one_issue():
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == 101
-    assert url == 'https://github.com/bcgov/bc-laws-api/issues/4'
-    assert title == 'Favourites Tree Threshold Limit Break'
+    assert url == 'https://github.com/bcgov/first-issue'
+    assert title == 'First Issue'
 
     with pytest.raises(StopIteration):
         open_issues.__next__()
@@ -47,13 +47,13 @@ def test_two_issues():
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == 101
-    assert url == 'https://github.com/bcgov/bc-laws-api/issues/4'
-    assert title == 'Favourites Tree Threshold Limit Break'
+    assert url == 'https://github.com/bcgov/first-issue'
+    assert title == 'First Issue'
 
     issue_id, url, title = open_issues.__next__()
     assert issue_id == 102
-    assert url == 'https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7'
-    assert title == 'Upgrade WP Sage Core Commenting - Part Three - Load More'
+    assert url == 'https://github.com/bcgov/second-issue'
+    assert title == 'Second Issue'
 
     with pytest.raises(StopIteration):
         open_issues.__next__()

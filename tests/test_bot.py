@@ -59,8 +59,8 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with([101])
-    mock_tweet.assert_called_once_with('https://github.com/bcgov/bc-laws-api/issues/4',
-                                       'Favourites Tree Threshold Limit Break')
+    mock_tweet.assert_called_once_with('https://github.com/bcgov/first-issue',
+                                       'First Issue')
 
 
 @responses.activate
@@ -76,10 +76,10 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
-                  'Favourites Tree Threshold Limit Break'),
-             call('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
-                  'Upgrade WP Sage Core Commenting - Part Three - Load More')
+    calls = [call('https://github.com/bcgov/first-issue',
+                  'First Issue'),
+             call('https://github.com/bcgov/second-issue',
+                  'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
     mock_save_issues.assert_called_once_with([101, 102])
@@ -98,8 +98,8 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
-                                       'Upgrade WP Sage Core Commenting - Part Three - Load More')
+    mock_tweet.assert_called_once_with('https://github.com/bcgov/second-issue',
+                                       'Second Issue')
     mock_save_issues.assert_called_once_with([101, 102])
 
 
@@ -170,17 +170,17 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://github.com/bcgov/bc-laws-api/issues/4',
-                  'Favourites Tree Threshold Limit Break'),
-             call('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
-                  'Upgrade WP Sage Core Commenting - Part Three - Load More')
+    calls = [call('https://github.com/bcgov/first-issue',
+                  'First Issue'),
+             call('https://github.com/bcgov/second-issue',
+                  'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
     mock_save_issues.assert_called_once_with([102])
 
 
 def tweeting_raises_exception_side_effect(*args, **kwargs):
-    if args[0] == 'https://github.com/bcgov/bc-laws-api/issues/4':
+    if args[0] == 'https://github.com/bcgov/first-issue':
         raise Exception('Boom')
     else:
         return None
@@ -202,6 +202,6 @@ def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config
         twitter_bot = bot.BCDevExBot(config_setup)
         twitter_bot.process()
         assert mock_seen_issues.called
-        mock_tweet.assert_called_once_with('https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7',
-                                           'Upgrade WP Sage Core Commenting - Part Three - Load More')
+        mock_tweet.assert_called_once_with('https://github.com/bcgov/first-issue',
+                                           'First Issue')
         mock_save_issues.assert_called_once_with([101])
