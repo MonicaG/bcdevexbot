@@ -4,7 +4,7 @@
 
 This is the code base for the [@bcdevexbot](https://twitter.com/bcdevexbot) twitter bot. 
 
-The bot calls the [https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/](https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/) API and tweets any issues that have been added since the last time the bot ran.
+The bot calls the [https://bcdevexchange.org/api/opportunities](https://bcdevexchange.org/api/opportunities) API and tweets any issues that have been added since the last time the bot ran.
 
 Two processes make up the bot:
 
@@ -29,6 +29,6 @@ logging_config = /path/to/file/config/logging.yaml
 
 ## Disclaimer
 
-Not affiliated with the [https://bcdevexchange.org/home](https://bcdevexchange.org/home) site or the Province of British Columbia.
+Not affiliated with the [https://bcdevexchange.org/](https://bcdevexchange.org/) site or the Province of British Columbia.
 
 
