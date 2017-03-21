@@ -1,824 +1,350 @@
 """ Test responses for the BCDevExchange API calls """
 
-no_issues = '{"open": [], "closed": [], "inprogress": [], "blocked": []}'
+no_issues = '[]'
 
-one_issue = r'''{
-   "open": [
-        {
-          "url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10",
-          "repository_url": "https://api.github.com/repos/bcgov/interactive-infographic",
-          "labels_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/comments",
-          "events_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/events",
-          "html_url": "https://github.com/bcgov/first-issue",
-          "id": 101,
-          "number": 10,
-          "title": "First Issue",
-          "user": {
-            "login": "jeetz2",
-            "id": 18408736,
-            "avatar_url": "https://avatars.githubusercontent.com/u/18408736?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/jeetz2",
-            "html_url": "https://github.com/jeetz2",
-            "followers_url": "https://api.github.com/users/jeetz2/followers",
-            "following_url": "https://api.github.com/users/jeetz2/following{/other_user}",
-            "gists_url": "https://api.github.com/users/jeetz2/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/jeetz2/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/jeetz2/subscriptions",
-            "organizations_url": "https://api.github.com/users/jeetz2/orgs",
-            "repos_url": "https://api.github.com/users/jeetz2/repos",
-            "events_url": "https://api.github.com/users/jeetz2/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/jeetz2/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "128A0C"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Jquery",
-              "name": "Jquery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/UI/UX",
-              "name": "UI/UX",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 7,
-          "created_at": "2016-08-05T21:50:58Z",
-          "updated_at": "2016-08-19T22:20:49Z",
-          "closed_at": null,
-          "body": "# Background\r\nThe OCIO is looking for the development of an online infographic for users to interact with. The purpose is to clearly convey multi-dimensional information in a user-friendly, interactive, digital format. \r\n\r\nA prototype of the online infographic was developed by @coakenfold which demonstrates basic functionality (reference  #9). The OCIO now wants to build out a minimum viable product (MVP) based on the prototype and a **recently updated** [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf).\r\n\r\nSee the [Readme](https://github.com/bcgov/interactive-infographic/blob/master/README.md) for more info.\r\n\r\n### Story\r\nAs a product owner, I want to be able to create an MVP of an interactive infographic web-app so that that I can circulate it among my government colleagues for feedback.\r\n\r\n## Acceptance Criteria\r\n\r\n1. Develop a MVP of a dynamic version of the [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf). See this [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png) that illustrates how the interactive infographic might be structured. The MVP should make all of the relevant elements in the diagram interactive (e.g. bootstrap jQuery plugins: accordion, popovers, video, etc...). The MVP should also be made aesthetically appealing and visually similar to the latest diagram provided. Some exceptions are expected and the developer should communicate any recommended changes that would improve the online experience (e.g. the developer can ignore/remove the 3 vertical columns on the left side of the diagram). Dummy text content can be used where required and government staff can update the content after the issue is closed.\r\n\r\nThe following acceptance criteria from the previous issue (#2) remain applicable:\r\n2. Allow the insertion and deletion of content boxes (i.e. rows, see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n3. Allow the insertion and deletion of content elements (i.e. see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n4. Content box should have the ability to contain multiple content elements that scale according to the number of content elements. \r\n5. Allow the insertion and deletion of graphics (and perhaps text) into the content elements.\r\n6. When a user clicks on a content element (every row, or content box, should have this capability), an accordion window will expand/appear underneath. This [second diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/user-interaction.png) illustrates how a user might interact with the infographic.\r\n7. Allow the insertion and deletion of content in accordion windows, including text and hyperlinks (possibly graphics).\r\n8. Support vector graphics. You can use example graphics and text for the prototype.\r\n9. Provide the final product in a format that can be run on any computer (localhost) through any modern web-browser.\r\n10. Device agnostic and responsive.\r\n11. Use of commonly known, open web frameworks.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/interactive-infographic/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/OCIO%20Tech%20Strategies)  for more information on our work.\r\n",
-          "program": "OCIO Tech Strategies",
-          "skill": [
-            "Java",
-            "Jquery",
-            "UI/UX"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-   "closed": [
-        {
-          "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "repository_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit",
-          "labels_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/comments",
-          "events_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/events",
-          "html_url": "https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "id": 121821329,
-          "number": 7,
-          "title": "Upgrade WP Sage Core Commenting - Part Three - Load More",
-          "user": {
-            "login": "juhewitt",
-            "id": 15350676,
-            "avatar_url": "https://avatars.githubusercontent.com/u/15350676?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/juhewitt",
-            "html_url": "https://github.com/juhewitt",
-            "followers_url": "https://api.github.com/users/juhewitt/followers",
-            "following_url": "https://api.github.com/users/juhewitt/following{/other_user}",
-            "gists_url": "https://api.github.com/users/juhewitt/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/juhewitt/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/juhewitt/subscriptions",
-            "organizations_url": "https://api.github.com/users/juhewitt/orgs",
-            "repos_url": "https://api.github.com/users/juhewitt/repos",
-            "events_url": "https://api.github.com/users/juhewitt/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/juhewitt/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/Bootstrap",
-              "name": "Bootstrap",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/CSS",
-              "name": "CSS",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/enhancement",
-              "name": "enhancement",
-              "color": "84b6eb"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "159818"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/HTML",
-              "name": "HTML",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/JavaScript",
-              "name": "JavaScript",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/jQuery",
-              "name": "jQuery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/PHP",
-              "name": "PHP",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/WordPress",
-              "name": "WordPress",
-              "color": "eb6420"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 22,
-          "created_at": "2015-12-12T00:54:18Z",
-          "updated_at": "2016-03-08T23:02:07Z",
-          "closed_at": "2016-03-08T23:02:02Z",
-          "body": "# Load More\r\n## Background\r\nWe are looking to build upon the default core SAGE framework/WP OOTB commenting system.  As fans of the plug and play model, we are trying to accomplish this in a modular way for obvious reasons.  Through UX testing, our audience has identified three short comings to overcome: sorting, filtering and sequential loading.  This ticket, we are going to focus on sequential loading. \r\n\r\n### Story\r\nI want to be able to interact with groupings of comments dynamically so I can restrict the information presented to me for a more effective consultation experience.\r\n\r\n## Acceptance Criteria\r\n1. A user will read through a subset of comments on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n2. A user will read through a subset of replies within a thread on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n3. The admin of the blog can set the number of comments and replies within a set.\r\n4. Ideally, the solution will perform these using AJAX calls.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines] (https://github.com/bcgov/citizen-engagement-web-toolkit/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page] (https://bcdevexchange.org/programs/Citizen%20Engagement%20Web%20Toolkit)  for more information on our work.",
-          "program": "Citizen Engagement Web Toolkit",
-          "skill": [
-            "Bootstrap",
-            "CSS",
-            "HTML",
-            "JavaScript",
-            "jQuery",
-            "PHP",
-            "WordPress"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-    "inprogress": [],
-    "blocked": []
-}'''
-
-two_issues = r'''{
-   "open": [
-        {
-          "url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10",
-          "repository_url": "https://api.github.com/repos/bcgov/interactive-infographic",
-          "labels_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/comments",
-          "events_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/events",
-          "html_url": "https://github.com/bcgov/first-issue",
-          "id": 101,
-          "number": 10,
-          "title": "First Issue",
-          "user": {
-            "login": "jeetz2",
-            "id": 18408736,
-            "avatar_url": "https://avatars.githubusercontent.com/u/18408736?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/jeetz2",
-            "html_url": "https://github.com/jeetz2",
-            "followers_url": "https://api.github.com/users/jeetz2/followers",
-            "following_url": "https://api.github.com/users/jeetz2/following{/other_user}",
-            "gists_url": "https://api.github.com/users/jeetz2/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/jeetz2/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/jeetz2/subscriptions",
-            "organizations_url": "https://api.github.com/users/jeetz2/orgs",
-            "repos_url": "https://api.github.com/users/jeetz2/repos",
-            "events_url": "https://api.github.com/users/jeetz2/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/jeetz2/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "128A0C"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Jquery",
-              "name": "Jquery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/UI/UX",
-              "name": "UI/UX",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 7,
-          "created_at": "2016-08-05T21:50:58Z",
-          "updated_at": "2016-08-19T22:20:49Z",
-          "closed_at": null,
-          "body": "# Background\r\nThe OCIO is looking for the development of an online infographic for users to interact with. The purpose is to clearly convey multi-dimensional information in a user-friendly, interactive, digital format. \r\n\r\nA prototype of the online infographic was developed by @coakenfold which demonstrates basic functionality (reference  #9). The OCIO now wants to build out a minimum viable product (MVP) based on the prototype and a **recently updated** [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf).\r\n\r\nSee the [Readme](https://github.com/bcgov/interactive-infographic/blob/master/README.md) for more info.\r\n\r\n### Story\r\nAs a product owner, I want to be able to create an MVP of an interactive infographic web-app so that that I can circulate it among my government colleagues for feedback.\r\n\r\n## Acceptance Criteria\r\n\r\n1. Develop a MVP of a dynamic version of the [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf). See this [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png) that illustrates how the interactive infographic might be structured. The MVP should make all of the relevant elements in the diagram interactive (e.g. bootstrap jQuery plugins: accordion, popovers, video, etc...). The MVP should also be made aesthetically appealing and visually similar to the latest diagram provided. Some exceptions are expected and the developer should communicate any recommended changes that would improve the online experience (e.g. the developer can ignore/remove the 3 vertical columns on the left side of the diagram). Dummy text content can be used where required and government staff can update the content after the issue is closed.\r\n\r\nThe following acceptance criteria from the previous issue (#2) remain applicable:\r\n2. Allow the insertion and deletion of content boxes (i.e. rows, see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n3. Allow the insertion and deletion of content elements (i.e. see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n4. Content box should have the ability to contain multiple content elements that scale according to the number of content elements. \r\n5. Allow the insertion and deletion of graphics (and perhaps text) into the content elements.\r\n6. When a user clicks on a content element (every row, or content box, should have this capability), an accordion window will expand/appear underneath. This [second diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/user-interaction.png) illustrates how a user might interact with the infographic.\r\n7. Allow the insertion and deletion of content in accordion windows, including text and hyperlinks (possibly graphics).\r\n8. Support vector graphics. You can use example graphics and text for the prototype.\r\n9. Provide the final product in a format that can be run on any computer (localhost) through any modern web-browser.\r\n10. Device agnostic and responsive.\r\n11. Use of commonly known, open web frameworks.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/interactive-infographic/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/OCIO%20Tech%20Strategies)  for more information on our work.\r\n",
-          "program": "OCIO Tech Strategies",
-          "skill": [
-            "Java",
-            "Jquery",
-            "UI/UX"
-          ],
-          "earn": [
-            "$1000"
-          ]
+one_issue = r'''[
+   {
+       "__v": 1,
+        "_id": "58c9a3c1aa383e001d84d406",
+        "assignedTo": null,
+        "assignment": "2017-03-28T23:00:00.000Z",
+        "code": "first-issue",
+        "created": "2017-03-15T20:27:45.304Z",
+        "createdBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
         },
-        {
-          "url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2",
-          "repository_url": "https://api.github.com/repos/bcgov/interactive-infographic",
-          "labels_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/comments",
-          "events_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/events",
-          "html_url": "https://github.com/bcgov/second-issue",
-          "id": 102,
-          "number": 2,
-          "title": "Second Issue",
-          "user": {
-            "login": "lmullane",
-            "id": 12040839,
-            "avatar_url": "https://avatars.githubusercontent.com/u/12040839?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/lmullane",
-            "html_url": "https://github.com/lmullane",
-            "followers_url": "https://api.github.com/users/lmullane/followers",
-            "following_url": "https://api.github.com/users/lmullane/following{/other_user}",
-            "gists_url": "https://api.github.com/users/lmullane/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/lmullane/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/lmullane/subscriptions",
-            "organizations_url": "https://api.github.com/users/lmullane/orgs",
-            "repos_url": "https://api.github.com/users/lmullane/repos",
-            "events_url": "https://api.github.com/users/lmullane/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/lmullane/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Graphic%20Design",
-              "name": "Graphic Design",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "128A0C"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/HTML",
-              "name": "HTML",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Jquery",
-              "name": "Jquery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/UI/UX",
-              "name": "UI/UX",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 23,
-          "created_at": "2016-06-08T22:08:22Z",
-          "updated_at": "2016-07-21T17:39:14Z",
-          "closed_at": null,
-          "body": "# Background\r\nThe OCIO is looking for the development of an online infographic for users to interact with. The purpose is to clearly convey multi-dimensional information in a user-friendly, interactive, digital format. \r\n\r\nThe work entails the development of a working prototype of a dynamic version of the [OCIO Strategic FrameWork diagram](https://raw.githubusercontent.com/bcgov/interactive-infographic/master/wireframe/OCIO_Strategy_Framework.png). The prototype must enable the layout and content to change as the strategy may change over time. \r\n\r\nSee the [Readme](https://github.com/bcgov/interactive-infographic/blob/master/README.md) for more info.\r\n\r\n### Story\r\nAs a product owner, I want to be able to create a working prototype of an interactive web-app so that that I can improve the experience and understanding of government strategy by using a visual, interactive digital format.\r\n\r\n## Acceptance Criteria\r\n\r\n\r\n1. Develop a working prototype of a dynamic version of the [OCIO Strategic FrameWork diagram](https://raw.githubusercontent.com/bcgov/interactive-infographic/master/wireframe/OCIO_Strategy_Framework.png). See this [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png) that illustrates how the interactive infographic might be structured.\r\n2. Allow the insertion and deletion of content boxes (i.e. rows, see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n3. Allow the insertion and deletion of content elements (i.e. see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n4. Content box should have the ability to contain multiple content elements that scale according to the number of content elements. Challenge us on this one if it's unrealistic.\r\n5. Allow the insertion and deletion of graphics (and perhaps text) into the content elements.\r\n6. When a user clicks on a content element (every row, or content box, should have this capability), an accordion window will expand/appear underneath. This [second diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/user-interaction.png) illustrates how a user might interact with the infographic.\r\n7. Allow the insertion and deletion of content in accordion windows, including text and hyperlinks (possibly graphics).\r\n8. Support vector graphics. You can use example graphics and text for the prototype.\r\n9. Provide the final product in a format that can be run on any computer (localhost) through any modern web-browser.\r\n10. Device agnostic and responsive.\r\n11. Use of commonly known, open web frameworks.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/interactive-infographic/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/OCIO%20Tech%20Strategies)  for more information on our work.\r\n",
-          "program": "OCIO Tech Strategies",
-          "skill": [
-            "Graphic Design",
-            "HTML",
-            "Java",
-            "Jquery",
-            "UI/UX"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-   "closed": [
-        {
-          "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "repository_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit",
-          "labels_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/comments",
-          "events_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/events",
-          "html_url": "https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "id": 121821329,
-          "number": 7,
-          "title": "Upgrade WP Sage Core Commenting - Part Three - Load More",
-          "user": {
-            "login": "juhewitt",
-            "id": 15350676,
-            "avatar_url": "https://avatars.githubusercontent.com/u/15350676?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/juhewitt",
-            "html_url": "https://github.com/juhewitt",
-            "followers_url": "https://api.github.com/users/juhewitt/followers",
-            "following_url": "https://api.github.com/users/juhewitt/following{/other_user}",
-            "gists_url": "https://api.github.com/users/juhewitt/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/juhewitt/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/juhewitt/subscriptions",
-            "organizations_url": "https://api.github.com/users/juhewitt/orgs",
-            "repos_url": "https://api.github.com/users/juhewitt/repos",
-            "events_url": "https://api.github.com/users/juhewitt/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/juhewitt/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/Bootstrap",
-              "name": "Bootstrap",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/CSS",
-              "name": "CSS",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/enhancement",
-              "name": "enhancement",
-              "color": "84b6eb"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "159818"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/HTML",
-              "name": "HTML",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/JavaScript",
-              "name": "JavaScript",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/jQuery",
-              "name": "jQuery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/PHP",
-              "name": "PHP",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/WordPress",
-              "name": "WordPress",
-              "color": "eb6420"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 22,
-          "created_at": "2015-12-12T00:54:18Z",
-          "updated_at": "2016-03-08T23:02:07Z",
-          "closed_at": "2016-03-08T23:02:02Z",
-          "body": "# Load More\r\n## Background\r\nWe are looking to build upon the default core SAGE framework/WP OOTB commenting system.  As fans of the plug and play model, we are trying to accomplish this in a modular way for obvious reasons.  Through UX testing, our audience has identified three short comings to overcome: sorting, filtering and sequential loading.  This ticket, we are going to focus on sequential loading. \r\n\r\n### Story\r\nI want to be able to interact with groupings of comments dynamically so I can restrict the information presented to me for a more effective consultation experience.\r\n\r\n## Acceptance Criteria\r\n1. A user will read through a subset of comments on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n2. A user will read through a subset of replies within a thread on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n3. The admin of the blog can set the number of comments and replies within a set.\r\n4. Ideally, the solution will perform these using AJAX calls.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines] (https://github.com/bcgov/citizen-engagement-web-toolkit/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page] (https://bcdevexchange.org/programs/Citizen%20Engagement%20Web%20Toolkit)  for more information on our work.",
-          "program": "Citizen Engagement Web Toolkit",
-          "skill": [
-            "Bootstrap",
-            "CSS",
-            "HTML",
-            "JavaScript",
-            "jQuery",
-            "PHP",
-            "WordPress"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-    "inprogress": [],
-    "blocked": []
-}'''
-
-
-missing_id = r'''{
-   "open": [
-        {
-          "url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10",
-          "repository_url": "https://api.github.com/repos/bcgov/interactive-infographic",
-          "labels_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/comments",
-          "events_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/10/events",
-          "html_url": "https://github.com/bcgov/first-issue",
-          "id": 101,
-          "number": 10,
-          "title": "First Issue",
-          "user": {
-            "login": "jeetz2",
-            "id": 18408736,
-            "avatar_url": "https://avatars.githubusercontent.com/u/18408736?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/jeetz2",
-            "html_url": "https://github.com/jeetz2",
-            "followers_url": "https://api.github.com/users/jeetz2/followers",
-            "following_url": "https://api.github.com/users/jeetz2/following{/other_user}",
-            "gists_url": "https://api.github.com/users/jeetz2/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/jeetz2/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/jeetz2/subscriptions",
-            "organizations_url": "https://api.github.com/users/jeetz2/orgs",
-            "repos_url": "https://api.github.com/users/jeetz2/repos",
-            "events_url": "https://api.github.com/users/jeetz2/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/jeetz2/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "128A0C"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Jquery",
-              "name": "Jquery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/UI/UX",
-              "name": "UI/UX",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 7,
-          "created_at": "2016-08-05T21:50:58Z",
-          "updated_at": "2016-08-19T22:20:49Z",
-          "closed_at": null,
-          "body": "# Background\r\nThe OCIO is looking for the development of an online infographic for users to interact with. The purpose is to clearly convey multi-dimensional information in a user-friendly, interactive, digital format. \r\n\r\nA prototype of the online infographic was developed by @coakenfold which demonstrates basic functionality (reference  #9). The OCIO now wants to build out a minimum viable product (MVP) based on the prototype and a **recently updated** [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf).\r\n\r\nSee the [Readme](https://github.com/bcgov/interactive-infographic/blob/master/README.md) for more info.\r\n\r\n### Story\r\nAs a product owner, I want to be able to create an MVP of an interactive infographic web-app so that that I can circulate it among my government colleagues for feedback.\r\n\r\n## Acceptance Criteria\r\n\r\n1. Develop a MVP of a dynamic version of the [OCIO Strategic FrameWork diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/ocio_framework_2016%20v4.pdf). See this [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png) that illustrates how the interactive infographic might be structured. The MVP should make all of the relevant elements in the diagram interactive (e.g. bootstrap jQuery plugins: accordion, popovers, video, etc...). The MVP should also be made aesthetically appealing and visually similar to the latest diagram provided. Some exceptions are expected and the developer should communicate any recommended changes that would improve the online experience (e.g. the developer can ignore/remove the 3 vertical columns on the left side of the diagram). Dummy text content can be used where required and government staff can update the content after the issue is closed.\r\n\r\nThe following acceptance criteria from the previous issue (#2) remain applicable:\r\n2. Allow the insertion and deletion of content boxes (i.e. rows, see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n3. Allow the insertion and deletion of content elements (i.e. see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n4. Content box should have the ability to contain multiple content elements that scale according to the number of content elements. \r\n5. Allow the insertion and deletion of graphics (and perhaps text) into the content elements.\r\n6. When a user clicks on a content element (every row, or content box, should have this capability), an accordion window will expand/appear underneath. This [second diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/user-interaction.png) illustrates how a user might interact with the infographic.\r\n7. Allow the insertion and deletion of content in accordion windows, including text and hyperlinks (possibly graphics).\r\n8. Support vector graphics. You can use example graphics and text for the prototype.\r\n9. Provide the final product in a format that can be run on any computer (localhost) through any modern web-browser.\r\n10. Device agnostic and responsive.\r\n11. Use of commonly known, open web frameworks.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/interactive-infographic/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/OCIO%20Tech%20Strategies)  for more information on our work.\r\n",
-          "program": "OCIO Tech Strategies",
-          "skill": [
-            "Java",
-            "Jquery",
-            "UI/UX"
-          ],
-          "earn": [
-            "$1000"
-          ]
+        "criteria": "<ol>\n<li style=\"box-sizing: border-box; margin-left: 0px;\">New KML output must match current, mapserver-based, physical address viewer (<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml\" target=\"_blank\" rel=\"noopener noreferrer\">http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml</a>).</li>\n<ul style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">Start up new, geoserver-based, physical address viewer.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Property Lines.ICF &ndash; Private Ownership Details layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Site Addresses layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Using Find an Address, zoom to 6621 Oldfield Rd, Central Saanich, bc.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Zoom around the associated parcel (e.g., PID 2845857) and confirm that the parcel details placemark is always in view as per the screenshots attached at&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033</a></li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Find other large parcels and confirm that the two versions of the physical address viewer work the same.</li>\n</ul>\n<ol style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\" start=\"2\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The code must be submitted to the&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://github.com/geoserver\" target=\"_blank\" rel=\"noopener noreferrer\">GeoServer project on GitHub</a>&nbsp;and accepted into the core GeoServer product.</p>\n</li>\n</ol>\n</ol>",
+        "deadline": "2017-03-23T23:00:00.000Z",
+        "description": "<p class=\"MsoNormal\">In GeoServer WMS requests for KML output, you can specify that if more than a given number of features are to be returned, render them in a single GroundOverlay plus a point placemark for each feature. In the case of polygonal features, the placemark is located at the centroid of each polygon. These centroids can easily be beyond the BBOX specified in the WMS request in which case the returned placemarks are out of the current map view, leaving Google Earth and Cesium users with no way of seeing the non-spatial attributes of a polygon in the GroundOverlay.</p>\n<p class=\"MsoNormal\">&nbsp;Enhance GeoServer WMS KML output so that Point placemarks associated with a GroundOverlay are positioned within the BBOX of the WMS request. &nbsp;This could be implemented as a new KM option (e.g., kmplacemarkLocation:centroid or kmplacemarkLocation:roving) subject to approval by the GeoServer community.</p>\n<p class=\"MsoNormal\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n<p class=\"MsoNormal\">For more details of the work required, please visit the following GeoServer ticket:</p>\n<p class=\"MsoNormal\"><a href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033&nbsp;</a></p>",
+        "earn": 2500,
+        "evaluation": "<p class=\"MsoNormal\">Proposals will be evaluated based on the following:</p>\n<ul style=\"list-style-type: disc;\">\n<li class=\"MsoNormal\">Knowledge and experience with Java (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with GeoServer source code (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with KML output source code within GeoServer (40 points)</li>\n</ul>",
+        "github": "https://github.com/bcgov/databc-web-map-services/issues/3",
+        "isPublished": true,
+        "name": "First Issue",
+        "program": {
+            "_id": "589101d9677cb9001c6b6d01",
+            "code": "pro-databc",
+            "isPublished": true,
+            "logo": "uploads/logo-1489508615475.png",
+            "title": "DataBC"
         },
-        {
-          "url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2",
-          "repository_url": "https://api.github.com/repos/bcgov/interactive-infographic",
-          "labels_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/comments",
-          "events_url": "https://api.github.com/repos/bcgov/interactive-infographic/issues/2/events",
-          "html_url": "https://github.com/bcgov/second-issue",
-          "number": 2,
-          "title": "Second Issue",
-          "user": {
-            "login": "lmullane",
-            "id": 12040839,
-            "avatar_url": "https://avatars.githubusercontent.com/u/12040839?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/lmullane",
-            "html_url": "https://github.com/lmullane",
-            "followers_url": "https://api.github.com/users/lmullane/followers",
-            "following_url": "https://api.github.com/users/lmullane/following{/other_user}",
-            "gists_url": "https://api.github.com/users/lmullane/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/lmullane/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/lmullane/subscriptions",
-            "organizations_url": "https://api.github.com/users/lmullane/orgs",
-            "repos_url": "https://api.github.com/users/lmullane/repos",
-            "events_url": "https://api.github.com/users/lmullane/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/lmullane/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Graphic%20Design",
-              "name": "Graphic Design",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "128A0C"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/HTML",
-              "name": "HTML",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/Jquery",
-              "name": "Jquery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/interactive-infographic/labels/UI/UX",
-              "name": "UI/UX",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 23,
-          "created_at": "2016-06-08T22:08:22Z",
-          "updated_at": "2016-07-21T17:39:14Z",
-          "closed_at": null,
-          "body": "# Background\r\nThe OCIO is looking for the development of an online infographic for users to interact with. The purpose is to clearly convey multi-dimensional information in a user-friendly, interactive, digital format. \r\n\r\nThe work entails the development of a working prototype of a dynamic version of the [OCIO Strategic FrameWork diagram](https://raw.githubusercontent.com/bcgov/interactive-infographic/master/wireframe/OCIO_Strategy_Framework.png). The prototype must enable the layout and content to change as the strategy may change over time. \r\n\r\nSee the [Readme](https://github.com/bcgov/interactive-infographic/blob/master/README.md) for more info.\r\n\r\n### Story\r\nAs a product owner, I want to be able to create a working prototype of an interactive web-app so that that I can improve the experience and understanding of government strategy by using a visual, interactive digital format.\r\n\r\n## Acceptance Criteria\r\n\r\n\r\n1. Develop a working prototype of a dynamic version of the [OCIO Strategic FrameWork diagram](https://raw.githubusercontent.com/bcgov/interactive-infographic/master/wireframe/OCIO_Strategy_Framework.png). See this [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png) that illustrates how the interactive infographic might be structured.\r\n2. Allow the insertion and deletion of content boxes (i.e. rows, see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n3. Allow the insertion and deletion of content elements (i.e. see [wireframe](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/wireframe.png)).\r\n4. Content box should have the ability to contain multiple content elements that scale according to the number of content elements. Challenge us on this one if it's unrealistic.\r\n5. Allow the insertion and deletion of graphics (and perhaps text) into the content elements.\r\n6. When a user clicks on a content element (every row, or content box, should have this capability), an accordion window will expand/appear underneath. This [second diagram](https://github.com/bcgov/interactive-infographic/blob/master/wireframe/user-interaction.png) illustrates how a user might interact with the infographic.\r\n7. Allow the insertion and deletion of content in accordion windows, including text and hyperlinks (possibly graphics).\r\n8. Support vector graphics. You can use example graphics and text for the prototype.\r\n9. Provide the final product in a format that can be run on any computer (localhost) through any modern web-browser.\r\n10. Device agnostic and responsive.\r\n11. Use of commonly known, open web frameworks.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/interactive-infographic/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/OCIO%20Tech%20Strategies)  for more information on our work.\r\n",
-          "program": "OCIO Tech Strategies",
-          "skill": [
-            "Graphic Design",
-            "HTML",
-            "Java",
-            "Jquery",
-            "UI/UX"
-          ],
-          "earn": [
-            "$1000"
-          ]
+        "project": {
+            "_id": "589104a8677cb9001c6b6d05",
+            "code": "prj-data-bc-web-map-services",
+            "isPublished": true,
+            "name": "DataBC Web Map Services"
         },
-        {
-          "url": "https://api.github.com/repos/bcgov/databc-web-map-services/issues/1",
-          "repository_url": "https://api.github.com/repos/bcgov/databc-web-map-services",
-          "labels_url": "https://api.github.com/repos/bcgov/databc-web-map-services/issues/1/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/databc-web-map-services/issues/1/comments",
-          "events_url": "https://api.github.com/repos/bcgov/databc-web-map-services/issues/1/events",
-          "html_url": "https://github.com/bcgov/issue-three",
-          "id": 103,
-          "number": 1,
-          "title": "Third Issue",
-          "user": {
-            "login": "myopic73",
-            "id": 8550351,
-            "avatar_url": "https://avatars.githubusercontent.com/u/8550351?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/myopic73",
-            "html_url": "https://github.com/myopic73",
-            "followers_url": "https://api.github.com/users/myopic73/followers",
-            "following_url": "https://api.github.com/users/myopic73/following{/other_user}",
-            "gists_url": "https://api.github.com/users/myopic73/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/myopic73/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/myopic73/subscriptions",
-            "organizations_url": "https://api.github.com/users/myopic73/orgs",
-            "repos_url": "https://api.github.com/users/myopic73/repos",
-            "events_url": "https://api.github.com/users/myopic73/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/myopic73/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/databc-web-map-services/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/databc-web-map-services/labels/bug",
-              "name": "bug",
-              "color": "fc2929"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/databc-web-map-services/labels/GeoServer",
-              "name": "GeoServer",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/databc-web-map-services/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "159818"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/databc-web-map-services/labels/Java",
-              "name": "Java",
-              "color": "eb6420"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 22,
-          "created_at": "2016-05-11T21:45:33Z",
-          "updated_at": "2016-06-01T21:38:36Z",
-          "closed_at": null,
-          "body": "## Background\r\nWe currently use [GeoServer](http://geoserver.org/), and it's great, except for a little bug. KML Placemarks do not correctly locate when there is a KMSCORE=0 and mode=refresh for SDE EPSG:3005 polygon data. The ground overlay returned is correct, but the KML placemarks don't look like the coordinates have been converted from the native SRS of EPSG:3005. See the bug ticket here posted in the GeoServer community: [https://osgeo-org.atlassian.net/browse/GEOS-7369](https://osgeo-org.atlassian.net/browse/GEOS-7369)\r\n\r\nWe use GeoServer for our WMS services which outputs KML of spatial data housed in the BC Warehouse. The WMS services are accessible to the public and also consumed by our services, including placemarks the BC Data Catalogue which uses the WMS for map previews of spatial data.\r\n\r\n### Story\r\nA a Government of B.C. spatial web developer, I want GeoServer to correctly locate KML placemarks so I can display spatial information accessible to the public via KML/Google Earth.\r\n\r\n\r\n## Acceptance Criteria\r\n\r\n\r\n1. KML Placesmarks locate properly when there is a KMSCORE=0 and mode=refresh for SDE EPSG:3005 polygon data.\r\n2. The solutions works within the GeoServer 2.8 code base.\r\n\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nPlease read the [Contribution Guidelines](https://github.com/bcgov/databc-web-map-services/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nIf you are interested in working on this issue, please let us know by posting a comment below.\r\n\r\nAnd check out our [Partners page](https://bcdevexchange.org/programs/DataBC%20Web%20Mapping) for more information on our work.\r\n",
-          "program": "DataBC Web Mapping",
-          "skill": [
+        "proposalEmail": "Michelle.Douville@gov.bc.ca",
+        "short": "Is Java one of your languages of choice?  Do you value the ability to visualize geographic data on open source software?  If so, check out this GeoServer product enhancement request and opportunity to work with the team @ DataBC.",
+        "skills": [
             "GeoServer",
-            "Java"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-   "closed": [
-        {
-          "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "repository_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit",
-          "labels_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/labels{/name}",
-          "comments_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/comments",
-          "events_url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/issues/7/events",
-          "html_url": "https://github.com/bcgov/citizen-engagement-web-toolkit/issues/7",
-          "id": 121821329,
-          "number": 7,
-          "title": "Upgrade WP Sage Core Commenting - Part Three - Load More",
-          "user": {
-            "login": "juhewitt",
-            "id": 15350676,
-            "avatar_url": "https://avatars.githubusercontent.com/u/15350676?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/juhewitt",
-            "html_url": "https://github.com/juhewitt",
-            "followers_url": "https://api.github.com/users/juhewitt/followers",
-            "following_url": "https://api.github.com/users/juhewitt/following{/other_user}",
-            "gists_url": "https://api.github.com/users/juhewitt/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/juhewitt/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/juhewitt/subscriptions",
-            "organizations_url": "https://api.github.com/users/juhewitt/orgs",
-            "repos_url": "https://api.github.com/users/juhewitt/repos",
-            "events_url": "https://api.github.com/users/juhewitt/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/juhewitt/received_events",
-            "type": "User",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/$1000",
-              "name": "$1000",
-              "color": "0052cc"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/Bootstrap",
-              "name": "Bootstrap",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/CSS",
-              "name": "CSS",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/enhancement",
-              "name": "enhancement",
-              "color": "84b6eb"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "159818"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/HTML",
-              "name": "HTML",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/JavaScript",
-              "name": "JavaScript",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/jQuery",
-              "name": "jQuery",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/PHP",
-              "name": "PHP",
-              "color": "eb6420"
-            },
-            {
-              "url": "https://api.github.com/repos/bcgov/citizen-engagement-web-toolkit/labels/WordPress",
-              "name": "WordPress",
-              "color": "eb6420"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 22,
-          "created_at": "2015-12-12T00:54:18Z",
-          "updated_at": "2016-03-08T23:02:07Z",
-          "closed_at": "2016-03-08T23:02:02Z",
-          "body": "# Load More\r\n## Background\r\nWe are looking to build upon the default core SAGE framework/WP OOTB commenting system.  As fans of the plug and play model, we are trying to accomplish this in a modular way for obvious reasons.  Through UX testing, our audience has identified three short comings to overcome: sorting, filtering and sequential loading.  This ticket, we are going to focus on sequential loading. \r\n\r\n### Story\r\nI want to be able to interact with groupings of comments dynamically so I can restrict the information presented to me for a more effective consultation experience.\r\n\r\n## Acceptance Criteria\r\n1. A user will read through a subset of comments on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n2. A user will read through a subset of replies within a thread on a page or post and:\r\n  * select 'load more' to view the next subset of comments \r\n  * can continue to select 'load more' until all comments are present \r\n3. The admin of the blog can set the number of comments and replies within a set.\r\n4. Ideally, the solution will perform these using AJAX calls.\r\n\r\n## How to contribute\r\n\r\nWe will evaluate each pull request and choose the best solution to the issue based on the acceptance criteria. Submit the best solution and you could be paid $1000.\r\n\r\nMore than one pull request may be considered for payment on this issue.\r\n\r\nPlease read the [Contribution Guidelines] (https://github.com/bcgov/citizen-engagement-web-toolkit/blob/master/CONTRIBUTING.md) for the Terms that set the rules for participation in a Pay for Pull, including how you’ll get paid if you are successful.\r\n\r\nHave questions? Please post your questions in the comments section below this issue.\r\n\r\nAnd check out our [Partners page] (https://bcdevexchange.org/programs/Citizen%20Engagement%20Web%20Toolkit)  for more information on our work.",
-          "program": "Citizen Engagement Web Toolkit",
-          "skill": [
-            "Bootstrap",
-            "CSS",
-            "HTML",
-            "JavaScript",
-            "jQuery",
-            "PHP",
-            "WordPress"
-          ],
-          "earn": [
-            "$1000"
-          ]
-        }
-    ],
-    "inprogress": [],
-    "blocked": []
-}'''
+            "Java",
+            "KML",
+            "GitHub"
+        ],
+        "start": "2017-04-05T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-16T18:54:51.851Z",
+        "updatedBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    }
+]'''
+
+two_issues = r'''[
+   {
+        "__v": 1,
+        "_id": "58c9a3c1aa383e001d84d406",
+        "assignedTo": null,
+        "assignment": "2017-03-28T23:00:00.000Z",
+        "code": "first-issue",
+        "created": "2017-03-15T20:27:45.304Z",
+        "createdBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "criteria": "<ol>\n<li style=\"box-sizing: border-box; margin-left: 0px;\">New KML output must match current, mapserver-based, physical address viewer (<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml\" target=\"_blank\" rel=\"noopener noreferrer\">http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml</a>).</li>\n<ul style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">Start up new, geoserver-based, physical address viewer.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Property Lines.ICF &ndash; Private Ownership Details layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Site Addresses layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Using Find an Address, zoom to 6621 Oldfield Rd, Central Saanich, bc.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Zoom around the associated parcel (e.g., PID 2845857) and confirm that the parcel details placemark is always in view as per the screenshots attached at&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033</a></li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Find other large parcels and confirm that the two versions of the physical address viewer work the same.</li>\n</ul>\n<ol style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\" start=\"2\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The code must be submitted to the&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://github.com/geoserver\" target=\"_blank\" rel=\"noopener noreferrer\">GeoServer project on GitHub</a>&nbsp;and accepted into the core GeoServer product.</p>\n</li>\n</ol>\n</ol>",
+        "deadline": "2017-03-23T23:00:00.000Z",
+        "description": "<p class=\"MsoNormal\">In GeoServer WMS requests for KML output, you can specify that if more than a given number of features are to be returned, render them in a single GroundOverlay plus a point placemark for each feature. In the case of polygonal features, the placemark is located at the centroid of each polygon. These centroids can easily be beyond the BBOX specified in the WMS request in which case the returned placemarks are out of the current map view, leaving Google Earth and Cesium users with no way of seeing the non-spatial attributes of a polygon in the GroundOverlay.</p>\n<p class=\"MsoNormal\">&nbsp;Enhance GeoServer WMS KML output so that Point placemarks associated with a GroundOverlay are positioned within the BBOX of the WMS request. &nbsp;This could be implemented as a new KM option (e.g., kmplacemarkLocation:centroid or kmplacemarkLocation:roving) subject to approval by the GeoServer community.</p>\n<p class=\"MsoNormal\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n<p class=\"MsoNormal\">For more details of the work required, please visit the following GeoServer ticket:</p>\n<p class=\"MsoNormal\"><a href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033&nbsp;</a></p>",
+        "earn": 2500,
+        "evaluation": "<p class=\"MsoNormal\">Proposals will be evaluated based on the following:</p>\n<ul style=\"list-style-type: disc;\">\n<li class=\"MsoNormal\">Knowledge and experience with Java (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with GeoServer source code (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with KML output source code within GeoServer (40 points)</li>\n</ul>",
+        "github": "https://github.com/bcgov/databc-web-map-services/issues/3",
+        "isPublished": true,
+        "name": "First Issue",
+        "program": {
+            "_id": "589101d9677cb9001c6b6d01",
+            "code": "pro-databc",
+            "isPublished": true,
+            "logo": "uploads/logo-1489508615475.png",
+            "title": "DataBC"
+        },
+        "project": {
+            "_id": "589104a8677cb9001c6b6d05",
+            "code": "prj-data-bc-web-map-services",
+            "isPublished": true,
+            "name": "DataBC Web Map Services"
+        },
+        "proposalEmail": "Michelle.Douville@gov.bc.ca",
+        "short": "Is Java one of your languages of choice?  Do you value the ability to visualize geographic data on open source software?  If so, check out this GeoServer product enhancement request and opportunity to work with the team @ DataBC.",
+        "skills": [
+            "GeoServer",
+            "Java",
+            "KML",
+            "GitHub"
+        ],
+        "start": "2017-04-05T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-16T18:54:51.851Z",
+        "updatedBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    },
+    {
+        "__v": 0,
+        "_id": "58c72cf8aa383e001d84d3fb",
+        "assignedTo": null,
+        "assignment": "2017-03-24T23:00:00.000Z",
+        "code": "second-issue",
+        "created": "2017-03-13T23:36:24.780Z",
+        "createdBy": {
+            "_id": "58c0d898f3397f001d1d0a7d",
+            "displayName": "Lena Smith"
+        },
+        "criteria": "<h1><span style=\"color: #003366;\">Definitions</span></h1>\n<p>User = EAO staff member using a browser</p>\n<p>Service = Guidance Microservice&nbsp;</p>\n<h1><span style=\"color: #003366;\">Scope</span></h1>\n<p>This Help Wanted request is for the \"Service\" as defined above and its use described below.</p>\n<p>The outlined service will be hooked into existing code that can be accessed at: &nbsp;https://github.com/bcgov/esm-server. It is advisable that applicants make use of this code when creating their proposal and if selected, in the creation of the service.</p>\n<h2>System Use Case</h2>\n<ol>\n<li>User runs a web browser and points to the microservice URL</li>\n<li>User can add/edit sections in the main page.&nbsp;</li>\n<li>User can add/edit sub-sections for each section in the main page.</li>\n<li>User saves their changes, and the Service persists those changes in a database for all other users to see upon next browser reload.</li>\n<li>User will be able to upload documents that will list on the page</li>\n<li>User will be able to edit text using basic editing functionality including but not limited to &ndash; bold/italic/underline and colour&nbsp;</li>\n<li>User will be able to insert hyperlinks within the text</li>\n<li>All users will be able to search the site or individual pages</li>\n</ol>\n<h2>Service Provider Use Case</h2>\n<ol>\n<li>Install Service, e.g. npm install guidance-service --save-dev</li>\n<li>Fork source and deploy Service in OpenShift</li>\n<li>Configure Service with administrative credentials using OpenShift Deployment Environment Variable, e.g., ADMINPW=</li>\n</ol>\n<h2>Additional Criteria</h2>\n<p><strong>Need to have</strong></p>\n<ol>\n<li>Collaborate with EAO team within 3 business days of award to determine initial design requirements, look and feel, and workflow.</li>\n<li>MongoDB for database storage.</li>\n<li>Content must be password protected and not accessible to public users</li>\n<li>Editing of content must be restricted to authorized users</li>\n<li>Logs to console any errors.</li>\n<li>The service must be re-usable and extendable for future design / development iterations.</li>\n<li>The individual Page URL will be a human readable format based on the name of the page (SEO Friendly)</li>\n<li>The site will use appropriate accessibility standards making use of page readers, tabbing, and keyboard shortcuts&nbsp;</li>\n<li>Must be compatible with Internet Explorer 11, Microsoft Edge, Google Chrome, and Firefox</li>\n<li>The service should be end-user centric with specific attention paid to the user workflow, searchability/discoverability of content on the site, and overall ease of navigation and manipulation of content.&nbsp;</li>\n</ol>\n<p><strong>Nice to Have:</strong></p>\n<ol>\n<li>Solution for making the microservice viewable to only EAO users logged into EPIC</li>\n<li>Ability to integrate for &lsquo;future state&rsquo; with Javascript for NodeJS version 4.x following npm install and npm start conventions, while using Bootstrap 4 for styling the web content is deemed beneficial</li>\n<li>Look-feel will be in line with the BC Government Design Standards</li>\n</ol>\n<p>On <strong>March 17th at 11:00am</strong> we will be available for a virtual meeting to discuss this opportunity. If desired, please contact <strong>rumon.carter@gov.bc.ca</strong>&nbsp;for a meeting invitation.</p>\n<p>&nbsp;</p>",
+        "deadline": "2017-03-21T23:00:00.000Z",
+        "description": "<h1><span style=\"color: #003366;\"><strong>Background</strong></span></h1>\n<p>The BC Environmental Assessment Office (EAO) has recently launched EPIC (the EAO Project Information &amp; Collaboration system), an online tool for sharing project information with the public and stakeholders, supporting business intelligence, and for managing certain of its business processes (e.g. public comment periods). The launch of this new tool is part of a broader strategy by the EAO to create a digital services team tasked with modernizing and continuously improving its systems, tools and processes.</p>\n<h3><strong>Another of the EAO&rsquo;s aging tools is known as eGuide:&nbsp;</strong></h3>\n<p style=\"padding-left: 30px;\">&ldquo;eGuide is a knowledge base that simplifies the planning and delivery of Environmental Assessments (EAs) by EAO staff, and supports the operational function of the office. It links each step in the environmental assessment process to applicable government policies and procedures, templates and administrative learning resources. This eliminates policy and procedure binders, gives EAO staff quick and reliable access to current and accurate information.&rdquo;</p>\n<p>The problem is that this supposedly e(lectronic) tool, while built in html, is stuck on the EAO&rsquo;s shared drive, rendering it challenging to edit, sub-optimal to use, and ugly. It needs a facelift, and a functionality refresh.&nbsp;</p>\n<p>So the EAO is in the market for a guidance documentation microservice to replace eGuide, enabling members of the Office to better find, share and manage online reference and training materials. Ideally, this microservice will be integrated/integratable into EPIC. &nbsp;&nbsp;</p>\n<h1><span style=\"color: #003366;\"><strong>User Story</strong></span></h1>\n<h2>User Story 1: Content Consumer</h2>\n<p><strong>Need to have</strong></p>\n<p>A new member of the EAO staff needs to know how to draft a Section 10 order. They visit the Guide, navigate to the pertinent section of the EA process to find text describing the process for issuing a s. 10, links to the relevant section of the Environmental Assessment Act, and links to various templates materials (in .doc, .pdf, etc. format). In the alternative, the user enters &ldquo;s.10&rdquo; in a search field to find the same information.&nbsp;</p>\n<p><strong>Future state&nbsp;</strong></p>\n<p>Separate Guidance content is displayed dependent upon the user type / role assigned in the EPIC system, e.g. an EAO staff member will see different Guidance content than a public vs. working group vs. First Nations user.</p>\n<h2>User Story 2: Content Creator</h2>\n<p><strong>Need to have</strong></p>\n<p>A member of the EAO Digital Services team needs to create a new section in the Guide, to describe a new office procedure. They use the microservice to create a new page, entering a description for the page, and start to create sub sections within the page with accompanying hyperlinks and sub section text descriptions. They can create pointers to documents found within the EPIC Documents section, or can load new documents to the file server and point to those documents in that location. To do so they are required to hand code the new materials and solutions described above.</p>\n<p><strong>Nice to have</strong></p>\n<p>All of the above is possible, but enabled through a WYSIWYG interface such that a lay user, with no coding knowledge can create and edit text content as well as related documentation.&nbsp;</p>\n<p><strong>Future state</strong></p>\n<p>Content has enhanced &ldquo;wiki&rdquo; functionality such that all staff users can interact with content, suggest/make changes, etc.&nbsp;</p>\n<p>&nbsp;</p>",
+        "earn": 2000,
+        "evaluation": "<p>To apply for this work, please email a proposal to <strong>rumon.carter@gov.bc.ca</strong>. Please reference the issue name - \"Guidance Documentation Micro-service&rdquo; in your email subject line.</p>\n<p>With your proposal, you must attach a copy of the <a title=\"Code WIth Us Terms\" href=\"https://github.com/BCDevExchange/code-with-us/raw/master/Code%20With%20Us%20Paid%20Terms_Nov_28.pdf\" target=\"_blank\" rel=\"noopener noreferrer\"><em>Code&nbsp;With Us</em> Terms</a>, with the required information asked for in the &ldquo;Acceptance&rdquo; section of the document&nbsp;(Mandatory).&nbsp;</p>\n<p>We will score your proposal by the following criteria:</p>\n<ol>\n<li>Your confirmation of being able to commit the time to meet all of the Acceptance Criteria by <strong>March 31</strong>, 2017.</li>\n<li>The date you can commit to delivering your first working version for preliminary integration testing (15 points).</li>\n<li>A brief overview of how you will build the microservice.&nbsp;\n<ul>\n<li>Points awarded to the efficient user of Open Source Code</li>\n<li>Points awarded to scope of work within the proposal (i.e. Inclusion of &lsquo;nice to haves')</li>\n</ul>\n</li>\n<li>References to your relevant experience and demonstrated ability to do the work (50 points). For example, a link to your GitHub projects.</li>\n<li>Any added value you can provide within the fixed price (10 points).</li>\n</ol>",
+        "github": "",
+        "isPublished": true,
+        "name": "Second Issue",
+        "program": {
+            "_id": "589d707509b2ba001d06289b",
+            "code": "pro-environmental-assessment-office",
+            "isPublished": true,
+            "logo": "uploads/logo-1487265841121.jpg",
+            "title": "BC Environmental Assessment Office"
+        },
+        "project": {
+            "_id": "589d72e509b2ba001d06289c",
+            "code": "prj-esm-server",
+            "isPublished": true,
+            "name": "EAO Project Information & Collaboration System (EPIC)"
+        },
+        "proposalEmail": "",
+        "short": "EAO is in the market for a guidance documentation micro-service to replace eGuide, enabling members of the Office to better find, share and manage online reference and training materials. Ideally, this micro-service will be integrated/integratable into EPIC.",
+        "skills": [],
+        "start": "2017-03-24T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-14T05:34:57.497Z",
+        "updatedBy": {
+            "_id": "588b961c739f873d0eb00761",
+            "displayName": "Admin Local"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    }
+]'''
+
+
+missing_id = r'''[
+ {
+        "__v": 1,
+        "assignedTo": null,
+        "assignment": "2017-03-28T23:00:00.000Z",
+        "code": "opp-geoserver-enhancement--roving-point",
+        "created": "2017-03-15T20:27:45.304Z",
+        "createdBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "criteria": "<ol>\n<li style=\"box-sizing: border-box; margin-left: 0px;\">New KML output must match current, mapserver-based, physical address viewer (<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml\" target=\"_blank\" rel=\"noopener noreferrer\">http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml</a>).</li>\n<ul style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">Start up new, geoserver-based, physical address viewer.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Property Lines.ICF &ndash; Private Ownership Details layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Site Addresses layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Using Find an Address, zoom to 6621 Oldfield Rd, Central Saanich, bc.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Zoom around the associated parcel (e.g., PID 2845857) and confirm that the parcel details placemark is always in view as per the screenshots attached at&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033</a></li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Find other large parcels and confirm that the two versions of the physical address viewer work the same.</li>\n</ul>\n<ol style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\" start=\"2\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The code must be submitted to the&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://github.com/geoserver\" target=\"_blank\" rel=\"noopener noreferrer\">GeoServer project on GitHub</a>&nbsp;and accepted into the core GeoServer product.</p>\n</li>\n</ol>\n</ol>",
+        "deadline": "2017-03-23T23:00:00.000Z",
+        "description": "<p class=\"MsoNormal\">In GeoServer WMS requests for KML output, you can specify that if more than a given number of features are to be returned, render them in a single GroundOverlay plus a point placemark for each feature. In the case of polygonal features, the placemark is located at the centroid of each polygon. These centroids can easily be beyond the BBOX specified in the WMS request in which case the returned placemarks are out of the current map view, leaving Google Earth and Cesium users with no way of seeing the non-spatial attributes of a polygon in the GroundOverlay.</p>\n<p class=\"MsoNormal\">&nbsp;Enhance GeoServer WMS KML output so that Point placemarks associated with a GroundOverlay are positioned within the BBOX of the WMS request. &nbsp;This could be implemented as a new KM option (e.g., kmplacemarkLocation:centroid or kmplacemarkLocation:roving) subject to approval by the GeoServer community.</p>\n<p class=\"MsoNormal\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n<p class=\"MsoNormal\">For more details of the work required, please visit the following GeoServer ticket:</p>\n<p class=\"MsoNormal\"><a href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033&nbsp;</a></p>",
+        "earn": 2500,
+        "evaluation": "<p class=\"MsoNormal\">Proposals will be evaluated based on the following:</p>\n<ul style=\"list-style-type: disc;\">\n<li class=\"MsoNormal\">Knowledge and experience with Java (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with GeoServer source code (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with KML output source code within GeoServer (40 points)</li>\n</ul>",
+        "github": "https://github.com/bcgov/databc-web-map-services/issues/3",
+        "isPublished": true,
+        "name": "GeoServer Enhancement: Roving Point",
+        "program": {
+            "_id": "589101d9677cb9001c6b6d01",
+            "code": "pro-databc",
+            "isPublished": true,
+            "logo": "uploads/logo-1489508615475.png",
+            "title": "DataBC"
+        },
+        "project": {
+            "_id": "589104a8677cb9001c6b6d05",
+            "code": "prj-data-bc-web-map-services",
+            "isPublished": true,
+            "name": "DataBC Web Map Services"
+        },
+        "proposalEmail": "Michelle.Douville@gov.bc.ca",
+        "short": "Is Java one of your languages of choice?  Do you value the ability to visualize geographic data on open source software?  If so, check out this GeoServer product enhancement request and opportunity to work with the team @ DataBC.",
+        "skills": [
+            "GeoServer",
+            "Java",
+            "KML",
+            "GitHub"
+        ],
+        "start": "2017-04-05T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-16T18:54:51.851Z",
+        "updatedBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    }
+]'''
+
+empty_code = r'''[
+{
+       "__v": 1,
+        "_id": "58c9a3c1aa383e001d84d406",
+        "assignedTo": null,
+        "assignment": "2017-03-28T23:00:00.000Z",
+        "code": "",
+        "created": "2017-03-15T20:27:45.304Z",
+        "createdBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "criteria": "<ol>\n<li style=\"box-sizing: border-box; margin-left: 0px;\">New KML output must match current, mapserver-based, physical address viewer (<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml\" target=\"_blank\" rel=\"noopener noreferrer\">http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml</a>).</li>\n<ul style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">Start up new, geoserver-based, physical address viewer.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Property Lines.ICF &ndash; Private Ownership Details layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Site Addresses layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Using Find an Address, zoom to 6621 Oldfield Rd, Central Saanich, bc.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Zoom around the associated parcel (e.g., PID 2845857) and confirm that the parcel details placemark is always in view as per the screenshots attached at&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033</a></li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Find other large parcels and confirm that the two versions of the physical address viewer work the same.</li>\n</ul>\n<ol style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\" start=\"2\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The code must be submitted to the&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://github.com/geoserver\" target=\"_blank\" rel=\"noopener noreferrer\">GeoServer project on GitHub</a>&nbsp;and accepted into the core GeoServer product.</p>\n</li>\n</ol>\n</ol>",
+        "deadline": "2017-03-23T23:00:00.000Z",
+        "description": "<p class=\"MsoNormal\">In GeoServer WMS requests for KML output, you can specify that if more than a given number of features are to be returned, render them in a single GroundOverlay plus a point placemark for each feature. In the case of polygonal features, the placemark is located at the centroid of each polygon. These centroids can easily be beyond the BBOX specified in the WMS request in which case the returned placemarks are out of the current map view, leaving Google Earth and Cesium users with no way of seeing the non-spatial attributes of a polygon in the GroundOverlay.</p>\n<p class=\"MsoNormal\">&nbsp;Enhance GeoServer WMS KML output so that Point placemarks associated with a GroundOverlay are positioned within the BBOX of the WMS request. &nbsp;This could be implemented as a new KM option (e.g., kmplacemarkLocation:centroid or kmplacemarkLocation:roving) subject to approval by the GeoServer community.</p>\n<p class=\"MsoNormal\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n<p class=\"MsoNormal\">For more details of the work required, please visit the following GeoServer ticket:</p>\n<p class=\"MsoNormal\"><a href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033&nbsp;</a></p>",
+        "earn": 2500,
+        "evaluation": "<p class=\"MsoNormal\">Proposals will be evaluated based on the following:</p>\n<ul style=\"list-style-type: disc;\">\n<li class=\"MsoNormal\">Knowledge and experience with Java (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with GeoServer source code (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with KML output source code within GeoServer (40 points)</li>\n</ul>",
+        "github": "https://github.com/bcgov/first-issue",
+        "isPublished": true,
+        "name": "First Issue",
+        "program": {
+            "_id": "589101d9677cb9001c6b6d01",
+            "code": "pro-databc",
+            "isPublished": true,
+            "logo": "uploads/logo-1489508615475.png",
+            "title": "DataBC"
+        },
+        "project": {
+            "_id": "589104a8677cb9001c6b6d05",
+            "code": "prj-data-bc-web-map-services",
+            "isPublished": true,
+            "name": "DataBC Web Map Services"
+        },
+        "proposalEmail": "Michelle.Douville@gov.bc.ca",
+        "short": "Is Java one of your languages of choice?  Do you value the ability to visualize geographic data on open source software?  If so, check out this GeoServer product enhancement request and opportunity to work with the team @ DataBC.",
+        "skills": [
+            "GeoServer",
+            "Java",
+            "KML",
+            "GitHub"
+        ],
+        "start": "2017-04-05T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-16T18:54:51.851Z",
+        "updatedBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    }
+]'''
+
+code_starts_with_slash = r'''[
+   {
+       "__v": 1,
+        "_id": "58c9a3c1aa383e001d84d406",
+        "assignedTo": null,
+        "assignment": "2017-03-28T23:00:00.000Z",
+        "code": "/first-issue",
+        "created": "2017-03-15T20:27:45.304Z",
+        "createdBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "criteria": "<ol>\n<li style=\"box-sizing: border-box; margin-left: 0px;\">New KML output must match current, mapserver-based, physical address viewer (<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml\" target=\"_blank\" rel=\"noopener noreferrer\">http://openmaps.gov.bc.ca/kml/bcgov_physical_address_viewer.kml</a>).</li>\n<ul style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">Start up new, geoserver-based, physical address viewer.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Property Lines.ICF &ndash; Private Ownership Details layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Turn on Site Addresses layer in both viewers.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Using Find an Address, zoom to 6621 Oldfield Rd, Central Saanich, bc.</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Zoom around the associated parcel (e.g., PID 2845857) and confirm that the parcel details placemark is always in view as per the screenshots attached at&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033</a></li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">Find other large parcels and confirm that the two versions of the physical address viewer work the same.</li>\n</ul>\n<ol style=\"box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\" start=\"2\">\n<li style=\"box-sizing: border-box; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n</li>\n<li style=\"box-sizing: border-box; margin-top: 0.25em; margin-left: 0px;\">\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 16px;\">The code must be submitted to the&nbsp;<a style=\"box-sizing: border-box; background-color: transparent; color: #0366d6; text-decoration: none;\" href=\"https://github.com/geoserver\" target=\"_blank\" rel=\"noopener noreferrer\">GeoServer project on GitHub</a>&nbsp;and accepted into the core GeoServer product.</p>\n</li>\n</ol>\n</ol>",
+        "deadline": "2017-03-23T23:00:00.000Z",
+        "description": "<p class=\"MsoNormal\">In GeoServer WMS requests for KML output, you can specify that if more than a given number of features are to be returned, render them in a single GroundOverlay plus a point placemark for each feature. In the case of polygonal features, the placemark is located at the centroid of each polygon. These centroids can easily be beyond the BBOX specified in the WMS request in which case the returned placemarks are out of the current map view, leaving Google Earth and Cesium users with no way of seeing the non-spatial attributes of a polygon in the GroundOverlay.</p>\n<p class=\"MsoNormal\">&nbsp;Enhance GeoServer WMS KML output so that Point placemarks associated with a GroundOverlay are positioned within the BBOX of the WMS request. &nbsp;This could be implemented as a new KM option (e.g., kmplacemarkLocation:centroid or kmplacemarkLocation:roving) subject to approval by the GeoServer community.</p>\n<p class=\"MsoNormal\">The solution will also avoid duplicate labels where features appear in multiple adjacent tiles when creating tiled maps.</p>\n<p class=\"MsoNormal\">For more details of the work required, please visit the following GeoServer ticket:</p>\n<p class=\"MsoNormal\"><a href=\"https://osgeo-org.atlassian.net/browse/GEOS-8033\" target=\"_blank\" rel=\"noopener noreferrer\">https://osgeo-org.atlassian.net/browse/GEOS-8033&nbsp;</a></p>",
+        "earn": 2500,
+        "evaluation": "<p class=\"MsoNormal\">Proposals will be evaluated based on the following:</p>\n<ul style=\"list-style-type: disc;\">\n<li class=\"MsoNormal\">Knowledge and experience with Java (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with GeoServer source code (30 points)</li>\n<li class=\"MsoNormal\">Knowledge and experience with KML output source code within GeoServer (40 points)</li>\n</ul>",
+        "github": "https://github.com/bcgov/databc-web-map-services/issues/3",
+        "isPublished": true,
+        "name": "First Issue",
+        "program": {
+            "_id": "589101d9677cb9001c6b6d01",
+            "code": "pro-databc",
+            "isPublished": true,
+            "logo": "uploads/logo-1489508615475.png",
+            "title": "DataBC"
+        },
+        "project": {
+            "_id": "589104a8677cb9001c6b6d05",
+            "code": "prj-data-bc-web-map-services",
+            "isPublished": true,
+            "name": "DataBC Web Map Services"
+        },
+        "proposalEmail": "Michelle.Douville@gov.bc.ca",
+        "short": "Is Java one of your languages of choice?  Do you value the ability to visualize geographic data on open source software?  If so, check out this GeoServer product enhancement request and opportunity to work with the team @ DataBC.",
+        "skills": [
+            "GeoServer",
+            "Java",
+            "KML",
+            "GitHub"
+        ],
+        "start": "2017-04-05T07:00:00.000Z",
+        "status": "Pending",
+        "tags": [],
+        "updated": "2017-03-16T18:54:51.851Z",
+        "updatedBy": {
+            "_id": "58c89d9caa383e001d84d3fe",
+            "displayName": "Nicole De Greef"
+        },
+        "userIs": {
+            "admin": false,
+            "gov": false,
+            "member": false,
+            "request": false
+        },
+        "wasPublished": true
+    }
+]'''
+

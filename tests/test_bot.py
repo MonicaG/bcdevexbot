@@ -36,12 +36,12 @@ def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
     responses.add(responses.GET, api_url,
                   body=tests.data.one_issue, status=200)
 
-    mock_seen_issues.return_value = [101]
+    mock_seen_issues.return_value = ['58c9a3c1aa383e001d84d406']
     twitter_bot = bot.BCDevExBot(config_setup)
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    mock_save_issues.assert_called_once_with([101])
+    mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])
     mock_tweet.assert_not_called()
 
 
@@ -58,8 +58,8 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    mock_save_issues.assert_called_once_with([101])
-    mock_tweet.assert_called_once_with('https://github.com/bcgov/first-issue',
+    mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])
+    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/first-issue',
                                        'First Issue')
 
 
@@ -76,13 +76,13 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://github.com/bcgov/first-issue',
+    calls = [call('https://bcdevexchange.org/opportunities/first-issue',
                   'First Issue'),
-             call('https://github.com/bcgov/second-issue',
+             call('https://bcdevexchange.org/opportunities/second-issue',
                   'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
-    mock_save_issues.assert_called_once_with([101, 102])
+    mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406', '58c72cf8aa383e001d84d3fb'])
 
 
 @responses.activate
@@ -93,14 +93,14 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
     responses.add(responses.GET, api_url,
                   body=tests.data.two_issues, status=200)
 
-    mock_seen_issues.return_value = [101]
+    mock_seen_issues.return_value = ['58c9a3c1aa383e001d84d406']
     twitter_bot = bot.BCDevExBot(config_setup)
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    mock_tweet.assert_called_once_with('https://github.com/bcgov/second-issue',
+    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/second-issue',
                                        'Second Issue')
-    mock_save_issues.assert_called_once_with([101, 102])
+    mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406', '58c72cf8aa383e001d84d3fb'])
 
 
 @responses.activate
@@ -170,17 +170,17 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://github.com/bcgov/first-issue',
+    calls = [call('https://bcdevexchange.org/opportunities/first-issue',
                   'First Issue'),
-             call('https://github.com/bcgov/second-issue',
+             call('https://bcdevexchange.org/opportunities/second-issue',
                   'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
-    mock_save_issues.assert_called_once_with([102])
+    mock_save_issues.assert_called_once_with(['58c72cf8aa383e001d84d3fb'])
 
 
 def tweeting_raises_exception_side_effect(*args, **kwargs):
-    if args[0] == 'https://github.com/bcgov/first-issue':
+    if args[0] == 'https://bcdevexchange.org/opportunities/first-issue':
         raise Exception('Boom')
     else:
         return None
@@ -202,6 +202,6 @@ def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config
         twitter_bot = bot.BCDevExBot(config_setup)
         twitter_bot.process()
         assert mock_seen_issues.called
-        mock_tweet.assert_called_once_with('https://github.com/bcgov/first-issue',
+        mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/first-issue',
                                            'First Issue')
-        mock_save_issues.assert_called_once_with([101])
+        mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])

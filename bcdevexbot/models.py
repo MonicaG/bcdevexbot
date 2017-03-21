@@ -98,12 +98,15 @@ class Twitter:
 class BCDevExchangeIssues:
     """ Class for interacting with the BC Developer Exchange API """
 
-    URL = 'https://embed-bcdevexchange-prod.pathfinder.gov.bc.ca/api/issues/'
+    URL = 'https://bcdevexchange.org/api/opportunities'
+    # Unfortunately, the API doesn't return the full URL of the project. So, I am piecing it together, which
+    # is scary, as this is prone to break as they change the base URL.
+    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/'
 
     def __init__(self):
         response = requests.get(BCDevExchangeIssues.URL)
         if response.status_code == requests.codes.ok:
-            self._data = response.json()['open']
+            self._data = response.json()
             self._index = 0
         else:
             raise ConnectionError(
@@ -117,7 +120,18 @@ class BCDevExchangeIssues:
             raise StopIteration
         issue = self._data[self._index]
         self._index += 1
-        return issue['id'], issue['html_url'], issue['title']
+        id, github, code, name = issue['_id'].strip(), issue['github'].strip(), issue['code'].strip(), issue['name'].strip()
+        url = self._get_url(code, github)
+        return id, url, name
+
+    def _get_url(self, code, github):
+        if len(code) > 0:
+            if str(code).startswith('/'):
+                code = code[1:]
+            url = self.BASE_PROJECT_URL + code
+        else:
+            url = github
+        return url
 
 
 class Base:
