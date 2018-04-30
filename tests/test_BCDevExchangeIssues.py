@@ -33,7 +33,7 @@ def test_one_issue():
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/first-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
     assert title == 'First Issue'
 
     with pytest.raises(StopIteration):
@@ -47,12 +47,12 @@ def test_two_issues():
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/first-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
     assert title == 'First Issue'
 
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c72cf8aa383e001d84d3fb'
-    assert url == 'https://bcdevexchange.org/opportunities/second-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/cwu/second-issue'
     assert title == 'Second Issue'
 
     with pytest.raises(StopIteration):
@@ -76,7 +76,7 @@ def test_code_starts_with_slash():
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/first-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
     assert title == 'First Issue'
 
     with pytest.raises(StopIteration):

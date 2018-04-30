@@ -59,7 +59,7 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 
     assert mock_seen_issues.called
     mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])
-    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/first-issue',
+    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/cwu/first-issue',
                                        'First Issue')
 
 
@@ -76,9 +76,9 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://bcdevexchange.org/opportunities/first-issue',
+    calls = [call('https://bcdevexchange.org/opportunities/cwu/first-issue',
                   'First Issue'),
-             call('https://bcdevexchange.org/opportunities/second-issue',
+             call('https://bcdevexchange.org/opportunities/cwu/second-issue',
                   'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
@@ -98,7 +98,7 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/second-issue',
+    mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/cwu/second-issue',
                                        'Second Issue')
     mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406', '58c72cf8aa383e001d84d3fb'])
 
@@ -170,9 +170,9 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
     twitter_bot.process()
 
     assert mock_seen_issues.called
-    calls = [call('https://bcdevexchange.org/opportunities/first-issue',
+    calls = [call('https://bcdevexchange.org/opportunities/cwu/first-issue',
                   'First Issue'),
-             call('https://bcdevexchange.org/opportunities/second-issue',
+             call('https://bcdevexchange.org/opportunities/cwu/second-issue',
                   'Second Issue')
              ]
     mock_tweet.assert_has_calls(calls)
@@ -180,7 +180,7 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
 
 
 def tweeting_raises_exception_side_effect(*args, **kwargs):
-    if args[0] == 'https://bcdevexchange.org/opportunities/first-issue':
+    if args[0] == 'https://bcdevexchange.org/opportunities/cwu/first-issue':
         raise Exception('Boom')
     else:
         return None
@@ -202,6 +202,6 @@ def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config
         twitter_bot = bot.BCDevExBot(config_setup)
         twitter_bot.process()
         assert mock_seen_issues.called
-        mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/first-issue',
+        mock_tweet.assert_called_once_with('https://bcdevexchange.org/opportunities/cwu/first-issue',
                                            'First Issue')
         mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])

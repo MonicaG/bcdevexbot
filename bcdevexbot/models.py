@@ -101,7 +101,7 @@ class BCDevExchangeIssues:
     URL = 'https://bcdevexchange.org/api/opportunities'
     # Unfortunately, the API doesn't return the full URL of the project. So, I am piecing it together, which
     # is scary, as this is prone to break as they change the base URL.
-    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/'
+    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/cwu/'
 
     def __init__(self):
         response = requests.get(BCDevExchangeIssues.URL)
