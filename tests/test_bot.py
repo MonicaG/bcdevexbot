@@ -33,7 +33,7 @@ def config_setup():
 @patch('bot.persistence.DataStore.get')
 @patch('bot.persistence.DataStore.save')
 def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    data = json.load(open('data/one_issue.json', encoding='utf-8'))
+    data = json.load(open('tests/data/one_issue.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -51,7 +51,7 @@ def test_one_issue_already_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
 @patch('bot.persistence.DataStore.get')
 @patch('bot.persistence.DataStore.save')
 def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    data = json.load(open('data/one_issue.json', encoding='utf-8'))
+    data = json.load(open('tests/data/one_issue.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -70,7 +70,7 @@ def test_one_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 @patch('bot.persistence.DataStore.get')
 @patch('bot.persistence.DataStore.save')
 def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    data = json.load(open('data/two_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/two_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -93,7 +93,7 @@ def test_two_issue_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, conf
 @patch('bot.persistence.DataStore.get')
 @patch('bot.persistence.DataStore.save')
 def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    data = json.load(open('data/two_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/two_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -112,7 +112,7 @@ def test_two_issue_one_not_seen(mock_save_issues, mock_seen_issues, mock_tweet, 
 @patch('bot.persistence.DataStore.get')
 @patch('bot.persistence.DataStore.save')
 def test_no_issues(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    data = json.load(open('data/no_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/no_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -166,7 +166,7 @@ def test_error_sending_tweet(mock_save_issues, mock_seen_issues, mock_tweet, con
     """Test scenario: First issue has an exception while tweeting, second issue tweets successfully
     Expected results: Second issue is processed and its id is stored.  First issue's id is not stored.
     """
-    data = json.load(open('data/two_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/two_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -200,7 +200,7 @@ def test_issue_missing_id(mock_save_issues, mock_seen_issues, mock_tweet, config
     """Test scenario: First issue is new and tweeted successfully.  The second issue has bad data (the id is missing)
         Expected results: First issue's id is stored, but second one is not.  Third issue is not processed.
     """
-    data = json.load(open('data/missing_id.json', encoding='utf-8'))
+    data = json.load(open('tests/data/missing_id.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 
@@ -220,7 +220,7 @@ def test_unknown_opportunity_type(mock_save_issues, mock_seen_issues, mock_tweet
     """Test scenario: First issue is new and tweeted successfully The second issue has an unknown opportunity type.
         Expected results: First issue's id is stored, but second one is not. The third issue is not processed.
     """
-    data = json.load(open('data/unknown_opportunity_type.json', encoding='utf-8'))
+    data = json.load(open('tests/data/unknown_opportunity_type.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
 

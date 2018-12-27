@@ -18,6 +18,7 @@ class TwitterConfig(models.Base):
         tweet.reset_twitter_config()
         logger.info("Done Twitter Configuration process")
 
+
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser(description=('Calls the twitter help/configuration API. '
                                                       'Should only be run once per day as per twitter documentation')

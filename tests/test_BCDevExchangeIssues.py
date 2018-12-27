@@ -19,7 +19,7 @@ def test_connection_issue():
 
 @responses.activate
 def test_no_issues():
-    data = json.load(open('data/no_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/no_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
@@ -29,7 +29,7 @@ def test_no_issues():
 
 @responses.activate
 def test_one_issue():
-    data = json.load(open('data/one_issue.json', encoding='utf-8'))
+    data = json.load(open('tests/data/one_issue.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
@@ -44,7 +44,7 @@ def test_one_issue():
 
 @responses.activate
 def test_two_issues():
-    data = json.load(open('data/two_issues.json', encoding='utf-8'))
+    data = json.load(open('tests/data/two_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
                   json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
@@ -64,7 +64,7 @@ def test_two_issues():
 
 @responses.activate
 def test_empty_code():
-    data = json.load(open('data/empty_code.json', encoding='utf-8'))
+    data = json.load(open('tests/data/empty_code.json', encoding='utf-8'))
 
     responses.add(responses.GET, api_url, json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
