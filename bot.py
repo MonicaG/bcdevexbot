@@ -43,6 +43,7 @@ class BCDevExBot(models.Base):
             stored_issues.save(issue_ids)
             logger.info("Completed BC developer exchange bot run.")
 
+
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser(description=('Calls the BC Developer Exchange API and tweets any issues '
                                                       'added since the last time this process ran.')

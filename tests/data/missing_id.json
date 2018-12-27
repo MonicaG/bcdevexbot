@@ -1,0 +1,2350 @@
+[
+    {
+        "phases": {
+            "implementation": {
+                "isImplementation": true,
+                "capabilities": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 910000,
+                "startDate": "2019-06-01T23:00:00.227Z",
+                "endDate": "2020-03-31T23:00:00.227Z"
+            },
+            "inception": {
+                "isInception": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-agile-coaching",
+                        "_id": "5ada37d98feaae0019e918ae",
+                        "name": "Agile Coaching"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 45000,
+                "startDate": "2019-02-14T00:00:00.227Z",
+                "endDate": "2019-03-01T00:00:00.227Z"
+            },
+            "proto": {
+                "isPrototype": true,
+                "capabilities": [
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 300000,
+                "startDate": "2019-03-02T00:00:00.227Z",
+                "endDate": "2019-05-31T23:00:00.227Z"
+            },
+            "aggregate": {
+                "capabilities": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-agile-coaching",
+                        "_id": "5ada37d98feaae0019e918ae",
+                        "name": "Agile Coaching"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-quality-assurance",
+                        "_id": "5b6dd24781c0e000196eb3ce",
+                        "name": "Quality Assurance"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-wire-framing",
+                        "_id": "5ada38b78feaae0019e918b4",
+                        "name": "wireframing"
+                    },
+                    {
+                        "code": "capabilityskill-openshift",
+                        "_id": "5ada3a3b8feaae0019e918c6",
+                        "name": "OpenShift"
+                    },
+                    {
+                        "code": "capabilityskill-html",
+                        "_id": "5ada38c08feaae0019e918b5",
+                        "name": "html"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-css1",
+                        "_id": "5ae0e8abd35f6b0019e48f1e",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-python",
+                        "_id": "5b5f750f96ee730019654102",
+                        "name": "Python"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-scripting",
+                        "_id": "5ada3a4a8feaae0019e918ca",
+                        "name": "scripting"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-postgresql",
+                        "_id": "5ada39bb8feaae0019e918c2",
+                        "name": "Postgresql"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    }
+                ],
+                "target": 1255000,
+                "endDate": "2020-03-31T23:00:00.227Z",
+                "startDate": "2019-02-14T00:00:00.227Z"
+            }
+        },
+        "weights": {
+            "codechallenge": 0.35,
+            "skill": 0.05,
+            "question": 0.25,
+            "interview": 0.25,
+            "price": 0.1
+        },
+        "code": "first-issue",
+        "opportunityTypeCd": "sprint-with-us",
+        "name": "First Issue",
+        "short": "We are creating a web-application to provide reliable access to a database for BC's industrial greenhouse gas (GHG) emissions data.  This interface will initially work with an existing database and industrial reporting system. Over time, the project may extend to database improvements or other parts of BC’s GHG data system. We are looking for a collaborative team, ready to learn, and passionate about providing solutions that will contribute to reducing industrial GHG emissions in BC and improving reporting to the public about our progress to our GHG targets.",
+        "description": "<p class=\"MsoNormal\">Large industrial operations in BC have been required to report their GHG emissions and related data to the Province since 2010. <a href=\"https://cleanbc.gov.bc.ca/\">CleanBC</a> sets out the next phase of actions that will move BC toward meeting<a href=\"http://www.bclaws.ca/Recon/document/ID/freeside/00_07042_01\"> legislated greenhouse gas (GHG) targets</a>, including an Industrial Incentive Program that rewards industrial operations for moving toward world leading emissions benchmarks and a Clean Industry Fund that invests in emission reduction projects for industry. These programs require expanded capabilities to store, sort, check, and analyze industrial GHG data. The system we build may also be used to administer CleanBC for Industry programs, and track program outcomes.&nbsp; Improving access for policy makers to BC's wealth of&nbsp; data about industrial GHGs and the processes that drive them will help identify emissions reduction opportunities and measure the outcomes of our GHG reduction efforts in a timely way.</p>\n<p class=\"MsoNormal\">The project team will create a web-based interface that will replace the public excel-based <a href=\"https://www2.gov.bc.ca/gov/content/environment/climate-change/data/industrial-facility-ghg\">Industrial Facility GHG Emissions Report.</a> It will also expand the range of accessible data available for authorized internal government policy needs. The Product will be open source, using flexible technologies, and interoperable. This Product will also&nbsp; need to adhere to the framework outlined in the<a href=\"http://www.bclaws.ca/civix/document/id/lc/statreg/249_2015\"> Greenhouse Gas Emissions Reporting Regulation</a> and operate within a context of several related datasets within the BC government. This project will greatly expand the user base for BC&rsquo;s industrial GHG data, and so will need to include a simple and searchable web interface capable of meeting the different data viewing needs across a range of stakeholders.</p>\n<p class=\"MsoNormal\">The Product is anticipated to include:</p>\n<ol>\n<li class=\"MsoNormal\">A searchable web interface to replace government's&nbsp;<a href=\"https://www2.gov.bc.ca/gov/content/environment/climate-change/data/industrial-facility-ghg\">current system of public reporting</a>&nbsp;of emissions from industrial operations;</li>\n<li class=\"MsoNormal\">Ability to access all available information reported under the Greenhouse Gas Emission Reporting Regulation and <a href=\"https://www2.gov.bc.ca/assets/gov/environment/climate-change/ind/quantification/wci-2012.pdf\">WCI methodology</a> for authorized internal government policy needs;</li>\n<li class=\"MsoNormal\">Analytical and visualization tools (e.g. applying set formulae to the data or producing graphics);</li>\n<li class=\"MsoNormal\">Tools to assist government to test for compliance with the Regulation and check data quality;</li>\n<li class=\"MsoNormal\">Administrative supports for the CleanBC Program for Industry (e.g. managing program applications, eligibility calculations, result tracking);</li>\n<li class=\"MsoNormal\">Possible database improvements (currently in Oracle, but open to other database solutions) and optimization of/additions to industrial reporting inputs;</li>\n<li class=\"MsoNormal\">Options to link to or harmonize with other related systems (e.g. Provincial GHG Inventory, Carbon Neutral Government);&nbsp;</li>\n<li class=\"MsoNormal\">Diagnostic review of data flows throughout the system to ensure the integrity of data transfers;&nbsp;&nbsp;</li>\n<li class=\"MsoNormal\">Support for the creation of a complex data model that connects various components of GHG quantification and reporting.&nbsp; Examples include: process diagrams, third party GHG verification reports, spatial data, financial tracking, compliance actions and status, and data fields contingent on different methodology choices; and,</li>\n<li class=\"MsoNormal\">Controls to ensure that confidential information is only accessed and used in compliance with applicable legislation.</li>\n</ol>\n<p class=\"MsoNormal\">Ideally, the successful team will include a data wrangler, an experienced database architect and/or a technical architect with a skillset that can transition to meet the development needs beyond the Inception and Proof of Concept phases.&nbsp;</p>\n<p class=\"MsoNormal\">We are seeking new ideas and emerging technologies to improve the applications that support industrial GHG management in BC. We anticipate that, throughout the inception and proof of concept phases, we will further refine the scope and feature needs of the Product using a design focus and user research.&nbsp; As the project continues, other areas of need relating to GHG data may be identified and included.</p>\n<p class=\"MsoNormal\"><span style=\"box-sizing: border-box; font-weight: bolder;\"><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Evaluation Schedule for the Competition</span></span></p>\n<p class=\"MsoNormal\" style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; background-color: #ffffff; line-height: normal;\"><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 25</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th&nbsp;</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;- We will notify all applicants whether they are shortlisted</span></p>\n<p class=\"MsoNormal\" style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; background-color: #ffffff; line-height: normal;\"><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 29th - 31st -&nbsp;</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Code Challenge</span></p>\n<p class=\"MsoNormal\" style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; background-color: #ffffff; line-height: normal;\"><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; February 4</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&ndash; 6th - Team Scenario</span></p>\n<p class=\"MsoNormal\" style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; background-color: #ffffff; line-height: normal;\"><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 7</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th</span><span lang=\"EN-US\" style=\"box-sizing: border-box; font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;- We will notify all companies</span></p>",
+        "background": "",
+        "github": "https://github.com/Maralsotoudehnia/CAS-Industrial-GHG-System-Improvements/",
+        "views": 847,
+        "program": {
+            "code": "pro-climate-action-secretariat",
+            "title": "Climate Action Secretariat",
+            "logo": "uploads/logo-1544651427097.png",
+            "isPublished": true,
+            "_id": "5c11823b47a8d600235654ed"
+        },
+        "project": {
+            "code": "prj-industrial-ghg-reporting-database-improvements",
+            "name": "Industrial GHG Reporting System Improvements",
+            "isPublished": true,
+            "_id": "5c14386b4dd9120019062670"
+        },
+        "status": "Pending",
+        "onsite": "onsite",
+        "location": "Victoria",
+        "isPublished": true,
+        "wasPublished": true,
+        "createdBy": {
+            "_id": "588b961c739f873d0eb00761",
+            "displayName": "Admin Local"
+        },
+        "updated": "2018-12-21T20:43:11.495Z",
+        "updatedBy": {
+            "_id": "588b961c739f873d0eb00761",
+            "displayName": "Admin Local"
+        },
+        "issueUrl": "https://github.com/Maralsotoudehnia/CAS-Industrial-GHG-System-Improvements/issues/1",
+        "issueNumber": "1",
+        "proposalEmail": "",
+        "evaluation": "",
+        "criteria": "",
+        "skills": [],
+        "earn": 1255000,
+        "assignedTo": null,
+        "proposal": null,
+        "budget": 1255000,
+        "isDocConflictOfInterest": false,
+        "isDocNonDisclosure": false,
+        "isDocRequestForReferences": false,
+        "terms": "",
+        "questions": [],
+        "evaluationStage": 0,
+        "numberOfInterviews": 4,
+        "watchers": [
+            "5c12eb194dd912001905b78f",
+            "5bd9ddf969d15a0019dded29",
+            "5c1d1859c49bfa0019c833d1",
+            "58ef076960c3b70019ea1229",
+            "5ac04fbf95d4980019951d19"
+        ],
+        "teamQuestionGradingType": "Linear",
+        "approvalRequired": true,
+        "isApproved": false,
+        "_id": "58c9a3c1aa383e001d84d406",
+        "deadline": "2019-01-24T00:00:00.227Z",
+        "assignment": "2019-02-07T00:00:00.227Z",
+        "start": "2018-12-14T23:11:23.227Z",
+        "endDate": "2018-12-15T00:00:00.227Z",
+        "teamQuestions": [
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d14b",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">How does your team approach working and communicating with less technical team members and subject matter experts?</span></p>",
+                "guideline": "<p>What is your team's approach to:</p>\n<p>- dealing with miscommunication,</p>\n<p>- ensuring that your team understands the problem area as the business sees it, and</p>\n<p>- translating technical solutions into plain language?&nbsp;</p>\n<p>&nbsp;</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d14a",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">What tools, processes and relationships does your team use to ensure continuous improvements, quality assurance and user acceptance?</span></p>",
+                "guideline": "<p>How does your team:&nbsp;</p>\n<p>- assure checks and balances are built into your workflow,</p>\n<p>- conduct peer-review on the work done, and</p>\n<p>- ensure that you've met user needs?</p>\n<p>&nbsp;</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d149",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">How does your team approach the development of user stories (e.g., determining the &lsquo;definition of done&rsquo; and assigning story points)?</span></p>",
+                "guideline": "<p>How does your team:</p>\n<p>- create a persona,</p>\n<p>- decide upon the steps needed to complete a task, and,</p>\n<p>- prioritize workflow?</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d148",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">How does your team approach the audit of existing data sources in various formats and optimise them for downstream purposes such as analytics?</span></p>",
+                "guideline": "<p>How does your team develop&nbsp;solutions to complex data problems?</p>\n<p>&nbsp;</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d147",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">How is the combination of the skills and experience of your team relevant to this opportunity?</span></p>",
+                "guideline": ""
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c181ea0c49bfa0019c5d146",
+                "question": "<p><span style=\"font-size: 11.0pt; line-height: 105%; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US;\">What defines a \"high-performing\" Scrum team?&nbsp; What metrics does your team use to measure its own performance?&nbsp; How do ensure that these metrics are accurate?</span></p>",
+                "guideline": "<p>How does your team conduct sprint planning and retrospectives?</p>"
+            }
+        ],
+        "addenda": [
+            {
+                "createdBy": "588b961c739f873d0eb00761",
+                "createdOn": "2018-12-21T20:43:05.130Z",
+                "_id": "5c1d505fc49bfa0019c8ad46",
+                "description": "<p>December 21, 2018: Please note, the notification email for this opportunity incorrectly identified the closing date as January 24, 2019. The correct date is as identified on the opportunity page.</p>"
+            }
+        ],
+        "lastPublished": "2018-12-19T23:10:47.671Z",
+        "created": "2018-12-14T23:11:54.371Z",
+        "intermediateApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c1438ba4dd91200190627b0"
+        },
+        "finalApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c1438ba4dd91200190627b1"
+        },
+        "contract": {
+            "managerName": "",
+            "managerEmail": "",
+            "businessArea": "",
+            "estimatedValue": 0,
+            "estimatedTerm": 0,
+            "contractType": "new",
+            "stobType": "6001/02",
+            "stobBudget": 0,
+            "stobExpenditures": 0,
+            "summary": "",
+            "legallyRequired": false,
+            "impactNotApproved": "",
+            "_id": "5c1438ba4dd91200190627b2"
+        },
+        "__v": 9,
+        "userIs": {
+            "admin": false,
+            "member": false,
+            "request": false,
+            "gov": false
+        }
+    },
+    {
+        "phases": {
+            "implementation": {
+                "isImplementation": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-security-engineering",
+                        "_id": "5ada3a6f8feaae0019e918cb",
+                        "name": "Security Engineering"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 150000,
+                "startDate": "2019-03-07T00:00:00.238Z",
+                "endDate": "2019-04-26T23:00:00.238Z"
+            },
+            "inception": {
+                "isInception": true,
+                "capabilities": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 20000,
+                "startDate": "2019-01-29T00:00:00.238Z",
+                "endDate": "2019-02-05T00:00:00.238Z"
+            },
+            "proto": {
+                "isPrototype": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 80000,
+                "startDate": "2019-02-06T00:00:00.238Z",
+                "endDate": "2019-03-06T00:00:00.238Z"
+            },
+            "aggregate": {
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-security-engineering",
+                        "_id": "5ada3a6f8feaae0019e918cb",
+                        "name": "Security Engineering"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-technical-architecture",
+                        "_id": "5ada3a028feaae0019e918c4",
+                        "name": "Technical Architecture"
+                    },
+                    {
+                        "code": "capability-devops-engineering",
+                        "_id": "5ada3a338feaae0019e918c5",
+                        "name": "DevOps Engineering"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-ui-design",
+                        "_id": "5ada38cf8feaae0019e918b7",
+                        "name": "UI design"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-microsoft-dynamics",
+                        "_id": "5c0051c562df5600191b41c8",
+                        "name": "Microsoft Dynamics"
+                    },
+                    {
+                        "code": "capabilityskill-jenkins",
+                        "_id": "5ada3a478feaae0019e918c9",
+                        "name": "Jenkins"
+                    }
+                ],
+                "target": 250000,
+                "endDate": "2019-04-26T23:00:00.238Z",
+                "startDate": "2019-01-29T00:00:00.238Z"
+            }
+        },
+        "weights": {
+            "codechallenge": 0.35,
+            "skill": 0.05,
+            "question": 0.25,
+            "interview": 0.25,
+            "price": 0.1
+        },
+        "code": "second-issue",
+        "opportunityTypeCd": "code-with-us",
+        "name": "Second Issue",
+        "short": "The K – 12 Next Generation Network (K12NGN) is a large network providing connectivity and security services to over 1,600 BC public schools grouped in 60 school districts with over 20 contracts. The delivery of the services is carried out through a group of vendors that are contracted by the Province. The K12NGN Team, through mostly manual processes, manages the service requests, ordering changes and incidents for all the public schools.",
+        "description": "<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span style=\"color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-weight: bold; background-color: #ffffff;\">December 21, 2018: This opportunities closing time has been reduced to January 14, 2019.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">Since 2017, the Next Generation Network(NGN) has delivered quality network services that include WAN, internet and security to over 1600 schools across the 60 school districts.&nbsp; Key business processes such as service requests and ordering, managing changes and incidents have been developed and implemented to support the delivery of these key services.&nbsp; Today, the service delivery of NGN is carried out manually using basic productivity tools (Words, Outlook, Excel) with a small staff of 3, and district information for the 1600+ NGN sites is managed on a single spreadsheet on SharePoint and shared among the 3 staff.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Impetus for the Project&nbsp;</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">CRM2011 was the application used for the legacy education network (PLNET), which is no longer supported.&nbsp; This legacy application does not adequately capture the business needs of the new K12NGN and needs to be replaced.&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Objectives</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">The Ministry of Education is looking for a team to help meet the following objectives:&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">1. Implement NGN business management processes in MS Dynamics</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">2. Integrates multiple school and vendor data sources into a structured and coherent data set.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">Please check out our <a href=\"https://github.com/bcgov/NGN/blob/master/K12%20NGN%20Business%20Automation%20Business%20Requirements.docx\">product backlog</a> for an understanding of the Epics and User Stories that describe the NGN business and<a href=\"https://github.com/bcgov/NGN/blob/master/EDUC%20Technical%20Constraints.pdf\"> this diagram</a> for an understanding of our technical constraints we&rsquo;ll need your team to work within should your company be the successful proponent.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>What We Need</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">We are looking for a team that is certified on MS Dynamics product solutions with strong capabilities in modern web application development that can work with the Ministry beyond the delivery of a minimum viable product.&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; We&rsquo;re looking for a team experienced with:</p>\n<p class=\"MsoNormal\" style=\"line-height: normal; padding-left: 30px;\">* Configuration of Microsoft Dynamics using out-of-the box features</p>\n<p class=\"MsoNormal\" style=\"line-height: normal; padding-left: 30px;\">* Agile/Scrum</p>\n<p class=\"MsoNormal\" style=\"line-height: normal; padding-left: 30px;\">* Test Driven Development</p>\n<p class=\"MsoNormal\" style=\"line-height: normal; padding-left: 30px;\">* Developing web applications that manage contracts and payments</p>\n<p class=\"MsoNormal\" style=\"line-height: normal; padding-left: 30px;\">* Developing APIs&nbsp;&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Who You&rsquo;ll Be Working With</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">We will provide the following resources on the government side to work with you:</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; A Product Owner who is a subject matter expert in the NGN business</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; Our Ministry Application Architect</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; Other subject matter experts as needed</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Evaluation Schedule for the Competition</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">This schedule could change, but our intention is to complete the competition and evaluation on this opportunity by the following schedule:</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&nbsp;<strong>January 14th</strong> &ndash; We will notify all applicants whether you are shortlisted</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&nbsp;If your company is shortlisted, your team will be invited to participate in the following activities:</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">This schedule could change, but our intention is to complete the competition and evaluation on this opportunity by the following schedule:</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">&nbsp;<strong style=\"mso-bidi-font-weight: normal;\">January 15th<span style=\"mso-bidi-font-weight: bold;\">&nbsp;&ndash;&nbsp;</span></strong>We will notify all applicants whether you are shortlisted</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">&nbsp;If your company is shortlisted, your team will be invited to participate in the following activities:</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">Jan 16 - 18th &ndash;&nbsp;</span></strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">Code Challenge</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">Jan 22nd &ndash;&nbsp;24<sup>th</sup> </span></strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">Team Scenario</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">Jan 25th&nbsp;&ndash;&nbsp;</span></strong><span lang=\"EN\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; color: black; mso-ansi-language: EN; mso-fareast-language: EN-CA;\">We will notify all companies of our decision and announce the winning company</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>About the Budget and Phases of Work</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Budget</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">The Total Proponent Cost set out in the Proponent&rsquo;s Proposal must not exceed $250,000 CAD (inclusive of all expenses but exclusive of applicable taxes). Proponents will not be permitted to submit a Proposal unless this mandatory requirement is satisfied.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Phases of Work</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">Inception phase (1 week)</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">We will work together to:</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; clearly define and align around our objectives</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; scope a backlog of what we think can be delivered by the end of the Proof of Concept phase, and</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&bull; set up the technical environment in which you&rsquo;ll deliver the product.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Proof of Concept phase (4 weeks)</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">For 2 sprints you will deliver on the backlog that we scoped in the Inception, culminating in an Alpha release.</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><em>Implementation phase (6 weeks)</em></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">&nbsp;</p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\">If we decide to continue the project past the Proof of Concept phase, and the budget for this phase is approved, you&rsquo;ll continue to deliver on the highest priority items in the product backlog.</p>\n<p>&nbsp;</p>",
+        "background": "",
+        "github": "https://github.com/bcgov/NGN/",
+        "views": 260,
+        "program": {
+            "code": "pro-ministry-of-education",
+            "title": "Ministry of Education",
+            "logo": "uploads/logo-1543269965980.jpg",
+            "isPublished": true,
+            "_id": "5bfc6e0062df5600191898e8"
+        },
+        "project": {
+            "code": "prj-next-generation-network-business-automation",
+            "name": "Next Generation Network Business Automation",
+            "isPublished": false,
+            "_id": "5c1c240bc49bfa0019c7f1ff"
+        },
+        "status": "Pending",
+        "onsite": "onsite",
+        "location": "Victoria",
+        "isPublished": true,
+        "wasPublished": true,
+        "createdBy": {
+            "_id": "5bfc6c7262df560019189384",
+            "displayName": "Greg Poirier"
+        },
+        "updated": "2018-12-22T00:42:09.292Z",
+        "updatedBy": {
+            "_id": "588b961c739f873d0eb00761",
+            "displayName": "Admin Local"
+        },
+        "issueUrl": "https://github.com/bcgov/NGN/issues/1",
+        "issueNumber": "1",
+        "proposalEmail": "",
+        "evaluation": "",
+        "criteria": "",
+        "skills": [],
+        "earn": 250000,
+        "assignedTo": null,
+        "proposal": null,
+        "budget": 250000,
+        "isDocConflictOfInterest": false,
+        "isDocNonDisclosure": false,
+        "isDocRequestForReferences": false,
+        "terms": "",
+        "questions": [],
+        "evaluationStage": 0,
+        "numberOfInterviews": 4,
+        "watchers": [
+            "58ef076960c3b70019ea1229"
+        ],
+        "teamQuestionGradingType": "Linear",
+        "approvalRequired": true,
+        "isApproved": false,
+        "deadline": "2019-01-15T00:00:00.238Z",
+        "assignment": "2019-01-26T00:00:00.238Z",
+        "start": "2018-12-20T23:21:57.238Z",
+        "endDate": "2018-12-21T00:00:00.238Z",
+        "teamQuestions": [
+            {
+                "wordLimit": 500,
+                "questionScore": 10,
+                "_id": "5c1c28ecc49bfa0019c7f51b",
+                "question": "<p>What experience does your company have with Microsoft Dynamics?</p>",
+                "guideline": "<p>Please include the following in your response:</p>\n<ul>\n<li>Description of projects</li>\n<li>Duration of projects</li>\n<li>Are the resulting applications still in use?</li>\n<li>What was the relative use of system configuration versus custom development (by percentage)?</li>\n</ul>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c1c2a82c49bfa0019c7f5bd",
+                "question": "<p>We anticipate that this opportunity will require you to create one or more APIs.&nbsp; How does your company design and implement APIs?&nbsp;</p>",
+                "guideline": ""
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c1c2a82c49bfa0019c7f5bc",
+                "question": "<p>We anticipate that this opportunity will require you to create several new business workflows (please refer to this opportunity's road map).&nbsp; How does your company design and implement new business workflows?&nbsp;</p>\n<p>&nbsp;</p>",
+                "guideline": ""
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c1c2a82c49bfa0019c7f5bb",
+                "question": "<p>Describe your experience developing and presenting operational dashboards</p>",
+                "guideline": ""
+            }
+        ],
+        "addenda": [
+            {
+                "createdBy": "588b961c739f873d0eb00761",
+                "createdOn": "2018-12-22T00:41:09.838Z",
+                "_id": "5c1d8836c49bfa0019c908e9",
+                "description": "<p><span style=\"box-sizing: border-box; font-weight: bolder; color: #212529; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; background-color: #ffffff;\">December 21, 2018: This opportunities closing time has been reduced to January 14, 2019.</span></p>"
+            }
+        ],
+        "lastPublished": "2018-12-22T00:01:30.295Z",
+        "created": "2018-12-20T23:42:36.754Z",
+        "intermediateApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c1c28ecc49bfa0019c7f51c"
+        },
+        "finalApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c1c28ecc49bfa0019c7f51d"
+        },
+        "contract": {
+            "managerName": "",
+            "managerEmail": "",
+            "businessArea": "",
+            "estimatedValue": 0,
+            "estimatedTerm": 0,
+            "contractType": "new",
+            "stobType": "6001/02",
+            "stobBudget": 0,
+            "stobExpenditures": 0,
+            "summary": "",
+            "legallyRequired": false,
+            "impactNotApproved": "",
+            "_id": "5c1c28ecc49bfa0019c7f51e"
+        },
+        "__v": 5,
+        "userIs": {
+            "admin": false,
+            "member": false,
+            "request": false,
+            "gov": false
+        }
+    },
+    {
+        "phases": {
+            "implementation": {
+                "isImplementation": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 435000,
+                "startDate": "2019-03-01T00:00:00.803Z",
+                "endDate": "2019-08-31T23:00:00.803Z"
+            },
+            "inception": {
+                "isInception": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 40000,
+                "startDate": "2019-01-22T00:00:00.803Z",
+                "endDate": "2019-01-29T00:00:00.803Z"
+            },
+            "proto": {
+                "isPrototype": true,
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    }
+                ],
+                "contract": "",
+                "target": 0,
+                "maxCost": 150000,
+                "startDate": "2019-01-30T00:00:00.803Z",
+                "endDate": "2019-02-28T00:00:00.803Z"
+            },
+            "aggregate": {
+                "capabilities": [
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-delivery-management--scrum-master-",
+                        "_id": "5ada38308feaae0019e918af",
+                        "name": "Delivery Management"
+                    },
+                    {
+                        "code": "capability-user-research",
+                        "_id": "5ada38728feaae0019e918b2",
+                        "name": "User Research"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitiesCore": [
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    },
+                    {
+                        "code": "capability-user-experience-design",
+                        "_id": "5ada389d8feaae0019e918b3",
+                        "name": "User Experience Design"
+                    },
+                    {
+                        "code": "capability-frontend-web-development",
+                        "_id": "5ada39278feaae0019e918ba",
+                        "name": "Frontend Web Development"
+                    },
+                    {
+                        "code": "capability-backend-web-development",
+                        "_id": "5ada39778feaae0019e918be",
+                        "name": "Backend Web Development"
+                    }
+                ],
+                "capabilitySkills": [
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    },
+                    {
+                        "code": "capabilityskill-scrum",
+                        "_id": "5ada38408feaae0019e918b1",
+                        "name": "Scrum"
+                    },
+                    {
+                        "code": "capabilityskill-css",
+                        "_id": "5ada38c38feaae0019e918b6",
+                        "name": "CSS"
+                    },
+                    {
+                        "code": "capabilityskill-angular",
+                        "_id": "5ada392e8feaae0019e918bc",
+                        "name": "Angular"
+                    },
+                    {
+                        "code": "capabilityskill-nodejs",
+                        "_id": "5ada399a8feaae0019e918bf",
+                        "name": "NodeJS"
+                    },
+                    {
+                        "code": "capabilityskill-restful-api-development",
+                        "_id": "5ada39b28feaae0019e918c1",
+                        "name": "RESTful API development"
+                    },
+                    {
+                        "code": "capabilityskill-mongo",
+                        "_id": "5ada39c28feaae0019e918c3",
+                        "name": "Mongo"
+                    },
+                    {
+                        "code": "capabilityskill-javascript",
+                        "_id": "5ae0e893d35f6b0019e48f1c",
+                        "name": "Javascript"
+                    },
+                    {
+                        "code": "capabilityskill-html1",
+                        "_id": "5ae0e8a7d35f6b0019e48f1d",
+                        "name": "HTML"
+                    }
+                ],
+                "target": 435000,
+                "endDate": "2019-08-31T23:00:00.803Z",
+                "startDate": "2019-01-22T00:00:00.803Z"
+            }
+        },
+        "weights": {
+            "codechallenge": 0.35,
+            "skill": 0.05,
+            "question": 0.25,
+            "interview": 0.25,
+            "price": 0.1
+        },
+        "code": "opp-concierge-web-app-development",
+        "opportunityTypeCd": "sprint-with-us",
+        "name": "Concierge Web App Development",
+        "short": "To design, develop, implement and support an innovative web application enabling Government Buyers and Vendor Suppliers of innovative solutions to connect and exchange business problems and innovative technical solutions.",
+        "description": "<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Objectives</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">We plan to fork the existing BC Developers&rsquo; Exchange web application, in order to add features related to technical product team procurement that are specific to the Procurement Transformation Branch.&nbsp; The final product would be a contact point for private sector and government program areas that would allow each party to easily reach out and collaborate on new products related to government digitization.&nbsp; We plan to leverage and augment the existing functionality in the BC Developers&rsquo; Exchange application in the new application and possibly share new features between the two solutions.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 1.1pt; text-align: justify; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">In the BC Procurement Strategy 2018, one of the goals is to realize the best value by buying innovative products that deliver better outcomes. To ensure that procurement processes embrace market-driven innovation, the Procurement Transformation Branch is aiming to function as a matchmaker between government buyers and suppliers of innovative solutions.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 1.1pt; text-align: justify; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">In order to achieve the above objective, we wish to develop a web application to connect government program areas with innovators in the technology sector. The proposed application will enable the government buyers to connect with the marketplace and at the same time facilitate the suppliers of innovative technical solutions to reach out to the buyers.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">What We Need</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">We are looking for a feature team to work with the Procurement Transformation Branch and the BC Developers&rsquo; Exchange teams.&nbsp; Specifically, we are looking for a capable feature team to leverage the existing web application used for Sprint With Us and Code With Us and extend and augment with new capabilities related to the objectives described above.&nbsp; The awarded team should have a strong aptitude in modern web development and experience in the following:</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Front-end development with Angular and Bootstrap 4</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Back-end development with Node.js, Express, and MongoDB</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Agile/Scrum methodology</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Test-driven development (TDD)</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">API development</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l4 level1 lfo6;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">User research and experience</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">A team consisting of&nbsp;<strong>1-2 Full Stack Developers</strong>&nbsp;and&nbsp;<strong>1 User Research/User Experience Expert&nbsp;</strong>would be preferred, but alternate team compositions with the skills mentioned above may also be considered.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Product Outcomes</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Posting of initial business problems</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">:&nbsp; Government program areas would like the ability to ask the marketplace for information, approaches and recommendations regarding broad and specific business problems that relate to the delivery of their services. They are looking for an easy, efficient mechanism to engage with the tech sector and initiate a dialogue that will provide industry with the opportunity to comment on the scope and feasibility of existing or potential ideas to solve government&rsquo;s problems. The mechanism used for this purpose can sometimes be referred to as a Request For Information </span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Creating open dialogue event:</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">&nbsp;We are looking to provide vendors with different ways of responding to the business areas request, and one of those is an event during which multiple participants provide information in an open setting. Participants need to be able to use standard scheduling features to facilitate this event.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Private Communication:</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">&nbsp;There may be occasions when a vendor will want to connect with the program area in a more private setting to convey information on a one-on-one basis (providing brochure information, web links or examples of work etc).</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Matching vendors and government program areas interests</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">: Vendors will be able to connect with and provide information, ideas and/or solutions that are relevant to the&nbsp;government&rsquo;s needs. This information will be directed to the appropriate individuals in interested government program areas.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Making Government Teams visible</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">: Vendors, who have registered, are able to identify people working in the relevant program area and are able to connect with them either directly or indirectly in a manner that makes sense to modern tech companies.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Registering a vendor company</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">: Vendors are able to supply the government with information that will be used to schedule discovery sessions and that may be used at a later time (downstream) during a procurement process.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Metrics for reporting and audit purposes</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">. Data will be collected that will provide the Concierge program information that will assist in the overall improvement of the system/process as well as for auditing purposes.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Authentication</span></strong><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">: Users will be able to use a single Sign-On solution to access the application.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Phases of Work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><strong><span style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Inception Phase (1 week)</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">We will work together to clearly define and align our objectives, as well as scope out the backlog and how it fits in with the current BC Developers&rsquo; Exchange backlog.&nbsp; We will also familiarize you with the current technical environment and fork the existing Developers&rsquo; Exchange web application.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">At the end of Inception, you should have:</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-line-height-alt: 12.85pt; mso-list: l1 level1 lfo4;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Happy stakeholders with a shared vision for the digital product</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-line-height-alt: 12.85pt; mso-list: l1 level1 lfo4;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">A product backlog for the MVP release</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 36.0pt; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 4;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Proof of Concept Phase (4 weeks)</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">For the next two sprints, we work with you to deliver the scoped work into a Minimum Viable Product.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">At the end of Proof of Concept, you should have:</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l3 level1 lfo3;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Released an MVP of the product</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l3 level1 lfo3;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Helped the Product Manager make a build/buy/licence decision</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l3 level1 lfo3;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Helped the Product Manager create a Product Roadmap for the remainder of the contract</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-line-height-alt: 12.85pt; mso-list: l3 level1 lfo3;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">Reexamined the resourcing plan for the Implementation phase</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 36.0pt; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 4;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Implementation Phase (8 months)</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: #212529; mso-ansi-language: EN-US; mso-fareast-language: EN-CA;\">This is the co</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">ntinuous improvement phase where you will build upon the application creating value, as directed by a mutually agreed product roadmap.</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">At the end of Implementation, you should have</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l5 level1 lfo5;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt; color: #212529; mso-ansi-language: EN-US;\">Delivered all of the functional outcomes listed on the Produc</span><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">t Roadmap</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 36.0pt; mso-line-height-alt: 12.85pt;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Who You&rsquo;ll Be Working With</span></strong></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">We will provide the following resources on the government side to work with you:</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">A technical lead on the BC Developers&rsquo; Exchange team who will help you navigate the development environment</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">A subject matter expert from the Procurement Transformation team on the Concierge and related procurements</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">A scrum master from the BC Developers&rsquo; Exchange who will provide backlog grooming, sprint planning and prioritization</span></p>\n<p class=\"MsoListParagraph\" style=\"margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;\"><!-- [if !supportLists]--><span style=\"font-size: 13.5pt; font-family: Symbol;\">&middot;<span style=\"font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span lang=\"EN-US\" style=\"font-size: 13.5pt;\">A product Manager from the BC Developers&rsquo; Exchange</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; margin-left: 36.0pt; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; text-indent: 36.0pt; line-height: normal; mso-outline-level: 3;\"><strong><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Evaluation Schedule for the Competition</span></strong></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 8</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th&nbsp;</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;- We will notify all applicants whether they are shortlisted</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 9th - 10th -&nbsp;</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">Code Challenge</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 14</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\"> &ndash; 16th - Team Scenario</span></p>\n<p class=\"MsoNormal\" style=\"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal;\"><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January 17</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">th</span><span lang=\"EN-US\" style=\"font-size: 13.5pt; font-family: 'Times New Roman', serif;\">&nbsp;- We will notify all companies</span></p>",
+        "background": "",
+        "github": "https://github.com/BCDevExchange/concierge/",
+        "views": 1369,
+        "program": {
+            "code": "pro-ministry-of-citizens--services1",
+            "title": "Ministry of Citizens' Services",
+            "logo": "modules/core/client/img/logo/avatar-2.png",
+            "isPublished": true,
+            "_id": "5c1299f647a8d600235697ef"
+        },
+        "project": {
+            "code": "prj-concierge-service",
+            "name": "Concierge Service",
+            "isPublished": false,
+            "_id": "5c1401194dd912001905ebb8"
+        },
+        "status": "Pending",
+        "onsite": "offsite",
+        "location": "Victoria",
+        "isPublished": true,
+        "wasPublished": true,
+        "createdBy": {
+            "_id": "5a205af1dbdf7c00198429a7",
+            "displayName": "Zachary Woodward"
+        },
+        "updated": "2018-12-21T23:33:24.208Z",
+        "updatedBy": {
+            "_id": "588b961c739f873d0eb00761",
+            "displayName": "Admin Local"
+        },
+        "issueUrl": "https://github.com/BCDevExchange/concierge/issues/1",
+        "issueNumber": "1",
+        "proposalEmail": "",
+        "evaluation": "",
+        "criteria": "",
+        "skills": [],
+        "earn": 435000,
+        "assignedTo": null,
+        "proposal": null,
+        "budget": 435000,
+        "isDocConflictOfInterest": false,
+        "isDocNonDisclosure": false,
+        "isDocRequestForReferences": false,
+        "terms": "",
+        "questions": [],
+        "evaluationStage": 0,
+        "numberOfInterviews": 4,
+        "watchers": [
+            "589a2125649c6b001dececa4",
+            "5b1eab4c6e2b3700193b98d0",
+            "5bb50ea55f03a900191387b1",
+            "5c1a51dac49bfa0019c69d19",
+            "58ef076960c3b70019ea1229",
+            "5ac04fbf95d4980019951d19"
+        ],
+        "teamQuestionGradingType": "Linear",
+        "approvalRequired": true,
+        "isApproved": false,
+        "_id": "5c14036c4dd912001905ee13",
+        "deadline": "2019-01-08T00:00:00.803Z",
+        "assignment": "2019-01-22T00:00:00.803Z",
+        "start": "2018-12-14T19:17:06.803Z",
+        "endDate": "2018-12-15T00:00:00.803Z",
+        "teamQuestions": [
+            {
+                "wordLimit": 300,
+                "questionScore": 3,
+                "_id": "5c1405954dd912001905ef49",
+                "question": "<p class=\"MsoNormal\"><span style=\"font-size: 11.0pt;\">How is the combination of the skills and experience of your team relevant to this opportunity?</span></p>",
+                "guideline": "<p>Identify how the team, identified in the response, meet or exceed the skills identified in the opportunity. Identify additional skills, if available, that can bring value to the opportunity and its development.</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c1405954dd912001905ef48",
+                "question": "<p class=\"MsoNormal\"><span style=\"font-size: 11.0pt;\">Successfully completing this opportunity will require your team to use the Scrum framework to deliver high-quality work at a fast pace.&nbsp; How has your team approached this challenge in the past?&nbsp;&nbsp;</span></p>",
+                "guideline": "<p>Identify methodologies utilized by your team to support and engage the Scrum framework, provide 1&nbsp;example&nbsp;of a challenge&nbsp;faced and the team's ability to react and respond.</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c1405954dd912001905ef47",
+                "question": "<p class=\"MsoNormal\"><span style=\"font-size: 11.0pt;\">How does your team determine whether or not a sprint has been successful?&nbsp; What metrics does your team use to measure its own performance?&nbsp;&nbsp;</span></p>",
+                "guideline": "<p>Detail the team's acceptance criteria for the completion of a sprint.</p>"
+            },
+            {
+                "wordLimit": 500,
+                "questionScore": 7,
+                "_id": "5c1405954dd912001905ef46",
+                "question": "<p class=\"MsoNormal\"><span style=\"font-size: 11.0pt;\">Tell us about your previous experience in extending an existing code base.&nbsp; How did you design new services or features to extend the existing code base?&nbsp; What would you do differently the second time around?</span></p>",
+                "guideline": "<p>Describe how you orient yourself to an unfamiliar code base, and your approach to modifying an existing solution to support new features.</p>"
+            },
+            {
+                "wordLimit": 300,
+                "questionScore": 5,
+                "_id": "5c14276d4dd9120019060761",
+                "question": "<p>What best practices does your team employ to ensure consistency and quality across the code base?</p>",
+                "guideline": "<p>Focus on strategies, best practices, and tools that your team employs to maintain consistency and quality.</p>"
+            }
+        ],
+        "addenda": [
+            {
+                "createdBy": "588b961c739f873d0eb00761",
+                "createdOn": "2018-12-21T20:44:38.294Z",
+                "_id": "5c1d50bbc49bfa0019c8aeba",
+                "description": "<p>December 21, 2018: Please note, the notification email for this opportunity incorrectly identified the closing date as January 8, 2019. The correct date is as identified on the opportunity page.</p>"
+            },
+            {
+                "createdBy": "588b961c739f873d0eb00761",
+                "createdOn": "2018-12-21T23:32:49.734Z",
+                "_id": "5c1d7844c49bfa0019c8df6d",
+                "description": "<p>The opportunity identifies the Implementation Phase as being both \"8 months\" and from \"February 28, 2019 to August 31, 2019\". Please note, the Implementation Phase is intended to run from February 28, 2019 to August 31, 2019.</p>"
+            }
+        ],
+        "lastPublished": "2018-12-17T21:47:10.522Z",
+        "created": "2018-12-14T19:24:28.354Z",
+        "intermediateApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c14036c4dd912001905ee14"
+        },
+        "finalApproval": {
+            "requestor": null,
+            "name": "",
+            "email": "",
+            "twoFAMethod": "email",
+            "mobileNumber": "",
+            "initiated": null,
+            "actioned": null,
+            "state": "draft",
+            "action": "pending",
+            "routeCode": "",
+            "twoFACode": 0,
+            "twoFASendCount": 0,
+            "twoFAAttemptCount": 0,
+            "_id": "5c14036c4dd912001905ee15"
+        },
+        "contract": {
+            "managerName": "",
+            "managerEmail": "",
+            "businessArea": "",
+            "estimatedValue": 0,
+            "estimatedTerm": 0,
+            "contractType": "new",
+            "stobType": "6001/02",
+            "stobBudget": 0,
+            "stobExpenditures": 0,
+            "summary": "",
+            "legallyRequired": false,
+            "impactNotApproved": "",
+            "_id": "5c14036c4dd912001905ee16"
+        },
+        "__v": 31,
+        "userIs": {
+            "admin": false,
+            "member": false,
+            "request": false,
+            "gov": false
+        }
+    }
+  ]

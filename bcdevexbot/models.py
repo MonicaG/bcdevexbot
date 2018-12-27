@@ -7,6 +7,7 @@ import tweepy
 import yaml
 
 from bcdevexbot import persistence
+from enum import Enum
 
 logger = logging.getLogger(__name__)
 
@@ -95,13 +96,18 @@ class Twitter:
         self._twitter_config_store.save(self._api.configuration())
 
 
+class OpportunityType(Enum):
+    cwu = 'code-with-us'
+    swu = 'sprint-with-us'
+
+
 class BCDevExchangeIssues:
     """ Class for interacting with the BC Developer Exchange API """
 
     URL = 'https://bcdevexchange.org/api/opportunities'
     # Unfortunately, the API doesn't return the full URL of the project. So, I am piecing it together, which
     # is scary, as this is prone to break as they change the base URL.
-    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/cwu/'
+    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/'
 
     def __init__(self):
         response = requests.get(BCDevExchangeIssues.URL)
@@ -120,15 +126,20 @@ class BCDevExchangeIssues:
             raise StopIteration
         issue = self._data[self._index]
         self._index += 1
-        id, github, code, name = issue['_id'].strip(), issue['github'].strip(), issue['code'].strip(), issue['name'].strip()
-        url = self._get_url(code, github)
-        return id, url, name
+        issue_id, github, code, name, opportunity_type = issue['_id'].strip(), issue['github'].strip(), \
+                                                   issue['code'].strip(), issue['name'].strip(), \
+                                                   issue['opportunityTypeCd'].strip()
+        url = self.get_url(code, github, opportunity_type)
+        return issue_id, url, name
 
-    def _get_url(self, code, github):
+    @staticmethod
+    def get_url(code, github, opportunity_type):
+        """ Made this static so I could unit test it easily """
         if len(code) > 0:
             if str(code).startswith('/'):
                 code = code[1:]
-            url = self.BASE_PROJECT_URL + code
+            opportunity_type_enum = OpportunityType(opportunity_type)
+            url = BCDevExchangeIssues.BASE_PROJECT_URL + opportunity_type_enum.name + "/" + code
         else:
             url = github
         return url

@@ -2,8 +2,8 @@
 
 import pytest
 import responses
+import json
 
-import tests.data
 from bcdevexbot import models
 
 api_url = models.BCDevExchangeIssues.URL
@@ -19,8 +19,9 @@ def test_connection_issue():
 
 @responses.activate
 def test_no_issues():
+    data = json.load(open('data/no_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
-                  body=tests.data.no_issues, status=200)
+                  json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
     with pytest.raises(StopIteration):
         open_issues.__next__()
@@ -28,12 +29,13 @@ def test_no_issues():
 
 @responses.activate
 def test_one_issue():
+    data = json.load(open('data/one_issue.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
-                  body=tests.data.one_issue, status=200)
+                  json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/swu/first-issue'
     assert title == 'First Issue'
 
     with pytest.raises(StopIteration):
@@ -42,12 +44,13 @@ def test_one_issue():
 
 @responses.activate
 def test_two_issues():
+    data = json.load(open('data/two_issues.json', encoding='utf-8'))
     responses.add(responses.GET, api_url,
-                  body=tests.data.two_issues, status=200)
+                  json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
     assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
+    assert url == 'https://bcdevexchange.org/opportunities/swu/first-issue'
     assert title == 'First Issue'
 
     issue_id, url, title = open_issues.__next__()
@@ -61,25 +64,42 @@ def test_two_issues():
 
 @responses.activate
 def test_empty_code():
-    responses.add(responses.GET, api_url, body=tests.data.empty_code, status=200)
+    data = json.load(open('data/empty_code.json', encoding='utf-8'))
+
+    responses.add(responses.GET, api_url, json=data, status=200)
     open_issues = models.BCDevExchangeIssues()
     issue_id, url, title = open_issues.__next__()
-    assert issue_id == '58c9a3c1aa383e001d84d406'
+    assert issue_id == '5c1438ba4dd91200190627af'
     assert url == 'https://github.com/bcgov/first-issue'
     assert title == 'First Issue'
 
 
-@responses.activate
 def test_code_starts_with_slash():
-    responses.add(responses.GET, api_url,
-                  body=tests.data.code_starts_with_slash, status=200)
-    open_issues = models.BCDevExchangeIssues()
-    issue_id, url, title = open_issues.__next__()
-    assert issue_id == '58c9a3c1aa383e001d84d406'
-    assert url == 'https://bcdevexchange.org/opportunities/cwu/first-issue'
-    assert title == 'First Issue'
-
-    with pytest.raises(StopIteration):
-        open_issues.__next__()
+    expected_link = 'https://bcdevexchange.org/opportunities/swu/first-issue'
+    actual_link = models.BCDevExchangeIssues.get_url('/first-issue',
+                                                     'https://github.com/bcgov/databc-web-map-services/issues/3',
+                                                     'sprint-with-us')
+    assert expected_link == actual_link
 
 
+def test_get_opportunity_type_code_swu():
+    expected_link = "https://bcdevexchange.org/opportunities/swu/opp-industrial-ghg-reporting-database-improvements"
+    actual_link = models.BCDevExchangeIssues.get_url("opp-industrial-ghg-reporting-database-improvements",
+                                    "https://github.com/Maralsotoudehnia/CAS-Industrial-GHG-System-Improvements/",
+                                    "sprint-with-us")
+    assert expected_link == actual_link
+
+
+def test_get_opportunity_type_code_cwu():
+    expected_link = 'https://bcdevexchange.org/opportunities/cwu/opp-create-sprint-with-us--code-challenge'
+    actual_link = models.BCDevExchangeIssues.get_url('opp-create-sprint-with-us--code-challenge',
+                                                     'github.com/BCDevExchange-CodeChallenge/CodeChallengeRules/',
+                                                     'code-with-us')
+    assert expected_link == actual_link
+
+
+def test_get_opportunity_type_code_unknown_code():
+    with pytest.raises(ValueError, message="expecting ValueError"):
+        models.BCDevExchangeIssues.get_url('opp-create-sprint-with-us--code-challenge',
+                                           'github.com/BCDevExchange-CodeChallenge/CodeChallengeRules/',
+                                           'unknown')
