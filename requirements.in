@@ -1,8 +1,8 @@
-py>=1.7.0
-pytest>=4.0.2
-PyYAML>=3.13
-requests>=2.20.0
-responses>=0.10.5
-tweepy>=3.7.0
+py>=1.8.1
+pytest>=5.4.2
+PyYAML>=5.3.1
+requests>=2.23.0
+responses>=0.10.14
+tweepy>=3.8.0
 
 

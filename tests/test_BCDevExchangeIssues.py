@@ -99,7 +99,7 @@ def test_get_opportunity_type_code_cwu():
 
 
 def test_get_opportunity_type_code_unknown_code():
-    with pytest.raises(ValueError, message="expecting ValueError"):
+    with pytest.raises(ValueError):
         models.BCDevExchangeIssues.get_url('opp-create-sprint-with-us--code-challenge',
                                            'github.com/BCDevExchange-CodeChallenge/CodeChallengeRules/',
                                            'unknown')
