@@ -3,7 +3,11 @@
 
 This is the code base for the [@bcdevexbot](https://twitter.com/bcdevexbot) twitter bot.
 
-The bot calls the [https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/](https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/)  and [https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/](https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/)APIs and tweets any opportunities that have been added since the last time the bot ran.
+The bot calls the following APIs:
+* [https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/](https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/)  
+* [https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/](https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/)
+
+It tweets any opportunities that have been added since the last time the bot ran.
 
 Two processes make up the bot:
 
