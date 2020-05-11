@@ -18,7 +18,7 @@ class BCDevExBot(models.Base):
         stored_issues = persistence.DataStore(self.config['file']['pickle_file'])
         seen_issues = stored_issues.get()
         issue_ids = []
-        open_issues = models.BCDevExchangeIssues()
+        open_issues = models.BCDevExchangeIssues().get_opportunities()
         # There are two try blocks because:
         # Inner try block deals with any exceptions while tweeting.  This allows for one issue to fail but allows for
         # the next issue to be processed.  Only the processed issue_ids will be stored.

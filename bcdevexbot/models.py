@@ -9,6 +9,8 @@ import yaml
 from bcdevexbot import persistence
 from enum import Enum
 
+from abc import ABC, abstractmethod
+
 logger = logging.getLogger(__name__)
 
 
@@ -64,7 +66,7 @@ class Twitter:
         elif str_url.startswith('https://'):
             url_length = self.get_short_url_length_https()
         else:
-            logger.warn("Could not determine protocol for url " + url)
+            logger.warning("Could not determine protocol for url " + url)
         return url_length
 
     def get_short_url_length(self):
@@ -96,53 +98,69 @@ class Twitter:
         self._twitter_config_store.save(self._api.configuration())
 
 
-class OpportunityType(Enum):
-    cwu = 'code-with-us'
-    swu = 'sprint-with-us'
-
-
 class BCDevExchangeIssues:
-    """ Class for interacting with the BC Developer Exchange API """
-
-    URL = 'https://bcdevexchange.org/api/opportunities'
-    # Unfortunately, the API doesn't return the full URL of the project. So, I am piecing it together, which
-    # is scary, as this is prone to break as they change the base URL.
-    BASE_PROJECT_URL = 'https://bcdevexchange.org/opportunities/'
+    """ Gathers any open opportunities  """
 
     def __init__(self):
-        response = requests.get(BCDevExchangeIssues.URL)
+        swu = SprintWithUsOpportunity()
+        cwu = CodeWithUsOpportunity()
+        self._data = swu.get_opportunities()
+        self._data.extend(cwu.get_opportunities())
+
+    def get_opportunities(self):
+        return self._data
+
+
+class AbstractBCDevExchangeOpportunity(ABC):
+
+    @property
+    @abstractmethod
+    def api_url(self):
+        pass
+
+    @property
+    @abstractmethod
+    def opportunity_url_base(self):
+        pass
+
+    def _get_url(self, issue_id):
+        return self.opportunity_url_base + issue_id
+
+    def get_opportunities(self):
+        response = requests.get(self.api_url)
         if response.status_code == requests.codes.ok:
-            self._data = response.json()
-            self._index = 0
+            data = response.json()
+            result = []
+            for issue in data:
+                issue_id, name = issue['id'].strip(), issue['title'].strip()
+                result.append((issue_id, self._get_url(issue_id), name))
+            return result
         else:
             raise ConnectionError(
-                "Error connecting. Status Code: {0} . Reason: {1}".format(response.status_code, response.reason))
+                "Error connecting to {0}. Status Code: {1} . Reason: {2}".format(self.api_url, response.status_code,
+                                                                                 response.reason))
 
-    def __iter__(self):
-        return self
 
-    def __next__(self):
-        if self._index == len(self._data):
-            raise StopIteration
-        issue = self._data[self._index]
-        self._index += 1
-        issue_id, github, code, name, opportunity_type = issue['_id'].strip(), issue['github'].strip(), \
-                                                   issue['code'].strip(), issue['name'].strip(), \
-                                                   issue['opportunityTypeCd'].strip()
-        url = self.get_url(code, github, opportunity_type)
-        return issue_id, url, name
+class SprintWithUsOpportunity(AbstractBCDevExchangeOpportunity):
 
-    @staticmethod
-    def get_url(code, github, opportunity_type):
-        """ Made this static so I could unit test it easily """
-        if len(code) > 0:
-            if str(code).startswith('/'):
-                code = code[1:]
-            opportunity_type_enum = OpportunityType(opportunity_type)
-            url = BCDevExchangeIssues.BASE_PROJECT_URL + opportunity_type_enum.name + "/" + code
-        else:
-            url = github
-        return url
+    @property
+    def api_url(self):
+        return 'https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/'
+
+    @property
+    def opportunity_url_base(self):
+        return 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/'
+
+
+class CodeWithUsOpportunity(AbstractBCDevExchangeOpportunity):
+
+    @property
+    def api_url(self):
+        return 'https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/'
+
+    @property
+    def opportunity_url_base(self):
+        return 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/'
 
 
 class Base:
@@ -159,7 +177,7 @@ class Base:
         path = self.config['file']['logging_config']
         if os.path.exists(path):
             with open(path, 'rt') as f:
-                config = yaml.load(f.read())
+                config = yaml.load(f.read(), Loader=yaml.FullLoader)
             logging.config.dictConfig(config)
         else:
             raise ValueError('Could not find ', path)

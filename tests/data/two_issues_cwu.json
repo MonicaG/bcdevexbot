@@ -1,0 +1,29 @@
+[
+    {
+        "id": "f1f6aca3-7143-41bc-99a7-8ce7014ac242",
+        "createdAt": "2020-05-01T21:58:13.985Z",
+        "versionId": "030383cd-1cf3-46d1-817a-0ba63b35999b",
+        "updatedAt": "2020-05-09T15:10:33.719Z",
+        "title": "First CWU Issue",
+        "teaser": "First CWU issue description.",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 200000,
+        "proposalDeadline": "2020-05-12T23:00:00.000Z",
+        "status": "PUBLISHED"
+    },
+    {
+        "id": "d2a6aca3-7143-41bc-99a7-8ce7014ac3af",
+        "createdAt": "2020-05-01T21:58:13.985Z",
+        "versionId": "030383cd-1cf3-46d1-817a-0ba63b35999b",
+        "updatedAt": "2020-05-09T15:10:33.719Z",
+        "title": "Second CWU Issue",
+        "teaser": "The second CWU issue description.",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 200000,
+        "proposalDeadline": "2020-05-12T23:00:00.000Z",
+        "status": "PUBLISHED"
+    }
+
+]
