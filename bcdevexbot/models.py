@@ -7,7 +7,6 @@ import tweepy
 import yaml
 
 from bcdevexbot import persistence
-from enum import Enum
 
 from abc import ABC, abstractmethod
 
@@ -123,6 +122,14 @@ class AbstractBCDevExchangeOpportunity(ABC):
     def opportunity_url_base(self):
         pass
 
+    @property
+    def status_open(self):
+        return "PUBLISHED"
+
+    @property
+    def status_closed(self):
+        return "AWARDED"
+
     def _get_url(self, issue_id):
         return self.opportunity_url_base + issue_id
 
@@ -132,8 +139,13 @@ class AbstractBCDevExchangeOpportunity(ABC):
             data = response.json()
             result = []
             for issue in data:
-                issue_id, name = issue['id'].strip(), issue['title'].strip()
-                result.append((issue_id, self._get_url(issue_id), name))
+                issue_id, name, status = issue['id'].strip(), issue['title'].strip(), issue['status'].strip()
+                if status == self.status_open:
+                    result.append((issue_id, self._get_url(issue_id), name))
+                elif status == self.status_closed:
+                    logger.info("Skipping {0} - Closed".format(issue_id))
+                else:
+                    logger.error("Unknown status {0} for issue {1} - {2}".format(status, issue_id, name))
             return result
         else:
             raise ConnectionError(

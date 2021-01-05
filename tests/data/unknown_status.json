@@ -1,0 +1,15 @@
+[
+  {
+        "id": "c9995fe1-0826-4f9a-88d9-f109c7f67b3c",
+        "createdAt": "2020-11-10T19:13:42.730Z",
+        "versionId": "e7b64570-c0e6-4652-b824-2b823f494b2f",
+        "updatedAt": "2020-12-16T19:23:49.210Z",
+        "title": "New Opportunity",
+        "teaser": "Cool new opportunity",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 400000,
+        "proposalDeadline": "2020-11-24T00:00:00.000Z",
+        "status": "NEW"
+    }
+]
