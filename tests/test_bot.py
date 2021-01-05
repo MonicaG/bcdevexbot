@@ -239,3 +239,61 @@ def tweeting_raises_exception_side_effect(*args, **kwargs):
         raise Exception('Boom')
     else:
         return None
+
+
+@responses.activate
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
+def test_only_published_status_are_processed(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
+    with open('tests/data/three_issues_cwu.json', encoding='utf-8') as cwu_file, \
+            open('tests/data/three_issues_swu.json', encoding='utf-8') as swu_file:
+        swu = models.SprintWithUsOpportunity()
+        cwu = models.CodeWithUsOpportunity()
+        data_swu = json.load(swu_file)
+        data_cwu = json.load(cwu_file)
+
+        responses.add(responses.GET, swu.api_url,
+                      json=data_swu, status=200)
+        responses.add(responses.GET, cwu.api_url,
+                      json=data_cwu, status=200)
+
+        mock_seen_issues.return_value = ['04003a5f-f609-469f-91bb-f3c6ac56bed7']
+        twitter_bot = bot.BCDevExBot(config_setup)
+        twitter_bot.process()
+
+        assert mock_seen_issues.called
+        calls = [
+                call(
+                    'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242',
+                    'First CWU Issue')
+                 ]
+        mock_tweet.assert_has_calls(calls)
+        mock_save_issues.assert_called_once_with(['04003a5f-f609-469f-91bb-f3c6ac56bed7', 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'])
+
+
+@responses.activate
+@patch('bot.models.Twitter.tweet_new_issue')
+@patch('bot.persistence.DataStore.get')
+@patch('bot.persistence.DataStore.save')
+def test_bad_status_is_not_processed(mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
+    with open('tests/data/one_issue_cwu.json', encoding='utf-8') as cwu_file, \
+            open('tests/data/unknown_status.json', encoding='utf-8') as unknown_file:
+        swu = models.SprintWithUsOpportunity()
+        cwu = models.CodeWithUsOpportunity()
+        data_swu = json.load(unknown_file)
+        data_cwu = json.load(cwu_file)
+
+        responses.add(responses.GET, swu.api_url,
+                      json=data_swu, status=200)
+        responses.add(responses.GET, cwu.api_url,
+                      json=data_cwu, status=200)
+
+        mock_seen_issues.return_value = ['f1f6aca3-7143-41bc-99a7-8ce7014ac242']
+        twitter_bot = bot.BCDevExBot(config_setup)
+        twitter_bot.process()
+
+        assert mock_seen_issues.called
+        calls = []
+        mock_tweet.assert_has_calls(calls)
+        mock_save_issues.assert_called_once_with(['f1f6aca3-7143-41bc-99a7-8ce7014ac242'])

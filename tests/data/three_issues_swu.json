@@ -1,0 +1,42 @@
+[
+    {
+        "id": "58c9a3c1aa383e001d84d406",
+        "createdAt": "2020-05-01T21:58:13.985Z",
+        "versionId": "030383cd-1cf3-46d1-817a-0ba63b35999b",
+        "updatedAt": "2020-05-09T15:10:33.719Z",
+        "title": "First Issue",
+        "teaser": "The Community Information Tool (CIT) is a Geographic Information System (GIS) and Microsoft Power BI based tool that provides comprehensive visual data designed to provide a solution and support investment decisions by incorporating community asset information with digital and other infrastructure data. ",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 200000,
+        "proposalDeadline": "2020-05-12T23:00:00.000Z",
+        "status": "AWARDED"
+    },
+    {
+        "id": "58c72cf8aa383e001d84d3fb",
+        "createdAt": "2020-05-01T21:58:13.985Z",
+        "versionId": "030383cd-1cf3-46d1-817a-0ba63b35999b",
+        "updatedAt": "2020-05-09T15:10:33.719Z",
+        "title": "Second Issue",
+        "teaser": "The second issue description. ",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 200000,
+        "proposalDeadline": "2020-05-12T23:00:00.000Z",
+        "status": "AWARDED"
+    },
+    {
+        "id": "04003a5f-f609-469f-91bb-f3c6ac56bed7",
+        "createdAt": "2020-07-14T18:45:36.089Z",
+        "versionId": "4f0c30c7-fa26-4171-aed2-6ad36e063853",
+        "updatedAt": "2020-09-11T16:51:01.898Z",
+        "title": "Third Issue",
+        "teaser": "The third issue description. ",
+        "remoteOk": true,
+        "location": "Victoria",
+        "totalMaxBudget": 325000,
+        "proposalDeadline": "2020-08-19T23:00:00.000Z",
+        "status": "PUBLISHED"
+    }
+
+]

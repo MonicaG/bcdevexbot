@@ -4,25 +4,54 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-attrs==18.2.0             # via pytest
-certifi==2018.11.29       # via requests
-chardet==3.0.4            # via requests
-idna==2.8                 # via requests
-importlib-metadata==1.6.0  # via pluggy, pytest
-more-itertools==4.3.0     # via pytest
-oauthlib==2.1.0           # via requests-oauthlib
-packaging==20.3           # via pytest
-pluggy==0.13.1            # via pytest
-py==1.8.1                 # via -r requirements.in, pytest
-pyparsing==2.4.7          # via packaging
-pysocks==1.6.8            # via tweepy
-pytest==5.4.2             # via -r requirements.in
-pyyaml==5.3.1             # via -r requirements.in
-requests-oauthlib==1.0.0  # via tweepy
-requests==2.23.0          # via -r requirements.in, requests-oauthlib, responses, tweepy
-responses==0.10.14        # via -r requirements.in
-six==1.12.0               # via more-itertools, packaging, responses, tweepy
-tweepy==3.8.0             # via -r requirements.in
-urllib3==1.24.2           # via requests
-wcwidth==0.1.9            # via pytest
-zipp==3.1.0               # via importlib-metadata
+attrs==20.3.0
+    # via pytest
+certifi==2018.11.29
+    # via requests
+chardet==3.0.4
+    # via requests
+idna==2.8
+    # via requests
+iniconfig==1.1.1
+    # via pytest
+oauthlib==2.1.0
+    # via requests-oauthlib
+packaging==20.3
+    # via pytest
+pluggy==0.13.1
+    # via pytest
+py==1.10.0
+    # via
+    #   -r requirements.in
+    #   pytest
+pyparsing==2.4.7
+    # via packaging
+pysocks==1.6.8
+    # via requests
+pytest==6.2.1
+    # via -r requirements.in
+pyyaml==5.3.1
+    # via -r requirements.in
+requests-oauthlib==1.0.0
+    # via tweepy
+requests[socks]==2.25.1
+    # via
+    #   -r requirements.in
+    #   requests-oauthlib
+    #   responses
+    #   tweepy
+responses==0.12.1
+    # via -r requirements.in
+six==1.12.0
+    # via
+    #   packaging
+    #   responses
+    #   tweepy
+toml==0.10.2
+    # via pytest
+tweepy==3.10.0
+    # via -r requirements.in
+urllib3==1.26.2
+    # via
+    #   requests
+    #   responses
