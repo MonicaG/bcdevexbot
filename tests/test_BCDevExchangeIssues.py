@@ -217,7 +217,7 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
     def test_unknown_status_is_handled(self):
         expected_log = 'ERROR:bcdevexbot.models:Unknown status NEW for issue c9995fe1-0826-4f9a-88d9-f109c7f67b3c - New Opportunity'
         with open('tests/data/unknown_status.json', encoding='utf-8') as bad_status_file, \
-             open('tests/data/one_issue_swu.json', encoding='utf-8') as swu_file:
+             open('tests/data/three_issues_swu.json', encoding='utf-8') as swu_file:
             swu = models.SprintWithUsOpportunity()
             cwu = models.CodeWithUsOpportunity()
             data_empty = json.load(swu_file)
@@ -229,6 +229,7 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             with self.assertLogs('bcdevexbot.models', level='ERROR') as log_context:
                 open_issues = models.BCDevExchangeIssues().get_opportunities()
                 assert len(open_issues) == 1
+                assert len(log_context.output) == 1
                 self.assertIn(expected_log, log_context.output)
 
 

@@ -10,7 +10,7 @@
         "location": "Victoria",
         "totalMaxBudget": 200000,
         "proposalDeadline": "2020-05-12T23:00:00.000Z",
-        "status": "AWARDED"
+        "status": "EVALUATION"
     },
     {
         "id": "58c72cf8aa383e001d84d3fb",

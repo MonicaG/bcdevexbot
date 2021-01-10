@@ -130,6 +130,16 @@ class AbstractBCDevExchangeOpportunity(ABC):
     def status_closed(self):
         return "AWARDED"
 
+    @property
+    def status_evaluation(self):
+        return "EVALUATION"
+
+    def is_status_closed(self, status):
+        return status == self.status_closed or status == self.status_evaluation
+
+    def is_status_open(self, status):
+        return status == self.status_open
+
     def _get_url(self, issue_id):
         return self.opportunity_url_base + issue_id
 
@@ -140,9 +150,9 @@ class AbstractBCDevExchangeOpportunity(ABC):
             result = []
             for issue in data:
                 issue_id, name, status = issue['id'].strip(), issue['title'].strip(), issue['status'].strip()
-                if status == self.status_open:
+                if self.is_status_open(status):
                     result.append((issue_id, self._get_url(issue_id), name))
-                elif status == self.status_closed:
+                elif self.is_status_closed(status):
                     logger.info("Skipping {0} - Closed".format(issue_id))
                 else:
                     logger.error("Unknown status {0} for issue {1} - {2}".format(status, issue_id, name))
