@@ -20,6 +20,7 @@ class SWUTests(unittest.TestCase):
         cwu = models.CodeWithUsOpportunity()
         assert cwu.is_status_closed("AWARDED")
         assert cwu.is_status_closed("EVALUATION")
+        assert cwu.is_status_closed("EVAL_QUESTIONS")
         self.assertFalse(cwu.is_status_closed("PUBLISHED"))
 
     def test_open_status(self):
@@ -27,6 +28,7 @@ class SWUTests(unittest.TestCase):
         assert cwu.is_status_open("PUBLISHED")
         self.assertFalse(cwu.is_status_open("EVALUATION"))
         self.assertFalse(cwu.is_status_open("AWARDED"))
+        self.assertFalse(cwu.is_status_open("EVAL_QUESTIONS"))
 
 
 if __name__ == '__main__':
