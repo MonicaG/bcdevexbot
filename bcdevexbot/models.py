@@ -138,8 +138,15 @@ class AbstractBCDevExchangeOpportunity(ABC):
     def status_eval_questions(self):
         return "EVAL_QUESTIONS"
 
+    @property
+    def status_eval_cc(self):
+        return "EVAL_CC"
+
     def is_status_closed(self, status):
-        return status == self.status_closed or status == self.status_evaluation or status == self.status_eval_questions
+        return status == self.status_closed \
+               or status == self.status_evaluation \
+               or status == self.status_eval_questions \
+               or status == self.status_eval_cc
 
     def is_status_open(self, status):
         return status == self.status_open
