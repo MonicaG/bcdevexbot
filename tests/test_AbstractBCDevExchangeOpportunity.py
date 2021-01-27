@@ -22,6 +22,7 @@ class SWUTests(unittest.TestCase):
         assert cwu.is_status_closed("EVALUATION")
         assert cwu.is_status_closed("EVAL_QUESTIONS")
         assert cwu.is_status_closed("EVAL_CC")
+        assert cwu.is_status_closed("EVAL_SCENARIO")
         self.assertFalse(cwu.is_status_closed("PUBLISHED"))
 
     def test_open_status(self):
@@ -31,6 +32,7 @@ class SWUTests(unittest.TestCase):
         self.assertFalse(cwu.is_status_open("AWARDED"))
         self.assertFalse(cwu.is_status_open("EVAL_QUESTIONS"))
         self.assertFalse(cwu.is_status_open("EVAL_CC"))
+        self.assertFalse(cwu.is_status_open("EVAL_SCENARIO"))
 
 
 if __name__ == '__main__':
