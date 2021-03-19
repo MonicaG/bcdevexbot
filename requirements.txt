@@ -51,7 +51,7 @@ toml==0.10.2
     # via pytest
 tweepy==3.10.0
     # via -r requirements.in
-urllib3==1.26.2
+urllib3==1.26.3
     # via
     #   requests
     #   responses
