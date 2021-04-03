@@ -1,8 +1,8 @@
 py>=1.10.0
-pytest>=6.2.1
-PyYAML>=5.3.1
+pytest>=6.2.2
+PyYAML>=5.4.1
 requests>=2.25.1
-responses>=0.12.1
+responses>=0.13.2
 tweepy>=3.10.0
-
+urllib3>=1.26.3 #added to force security updated. Requests and responses require this but it wasn't been updated by them
 
