@@ -1,8 +1,6 @@
-py>=1.10.0
-pytest>=6.2.2
-PyYAML>=5.4.1
-requests>=2.25.1
-responses>=0.13.2
-tweepy>=3.10.0
-urllib3>=1.26.3 #added to force security updated. Requests and responses require this but it wasn't been updated by them
-
+py>=1.11.0
+pytest>=6.2.5
+PyYAML>=6.0
+requests>=2.26.0
+responses>=0.16.0
+tweepy>=4.4.0
