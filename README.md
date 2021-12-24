@@ -1,5 +1,5 @@
 # bcdevexbot
-[![Build Status](https://travis-ci.org/MonicaG/bcdevexbot.svg?branch=master)](https://travis-ci.org/MonicaG/bcdevexbot)
+[![Build Status](https://github.com/MonicaG/bcdevexbot/actions/workflows/python-app.yml/badge.svg)](https://github.com/MonicaG/bcdevexbot/actions/workflows/python-app.yml)
 
 This is the code base for the [@bcdevexbot](https://twitter.com/bcdevexbot) twitter bot.
 
