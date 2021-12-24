@@ -48,7 +48,8 @@ toml==0.10.2
     # via pytest
 tweepy==4.4.0
     # via -r requirements.in
-urllib3==1.26.4
+urllib3==1.26.7
     # via
+    #   -r requirements.in
     #   requests
     #   responses

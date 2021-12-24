@@ -4,3 +4,5 @@ PyYAML>=6.0
 requests>=2.26.0
 responses>=0.16.0
 tweepy>=4.4.0
+urllib3>=1.26.5 #added to force security updated. Requests and responses require this but it wasn't been updated by them
+
