@@ -18,7 +18,8 @@ class DataStore:
             with open(self._pickle_file_path, 'rb') as f:
                 data = pickle.load(f)
         except FileNotFoundError:
-            logger.exception("Could not find the file " + self._pickle_file_path)
+            logger.exception("Could not find the file " +
+                             self._pickle_file_path)
             raise
         else:
             return data
