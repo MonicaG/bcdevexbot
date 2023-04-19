@@ -13,9 +13,9 @@ TWITTER_CONFIG = {'short_url_length': URL_LENGTH,
 
 
 @pytest.fixture
-@patch('tweepy.API')
+@patch('tweepy.Client')
 def tweet(mock_tweepy):
-    tweepy.API()
+    tweepy.Client()
 
     credentials = {'consumer_key': 'consumer_key',
                    'consumer_secret': 'consumer_secret',
@@ -34,8 +34,8 @@ def tweet(mock_tweepy):
 def test_tweepy_update_status_is_called(mock_twitter_config, tweet):
     mock_twitter_config.return_value = TWITTER_CONFIG
     tweet.tweet_new_issue("http://example.org", "A title example")
-    tweet._api.update_status.assert_called_with(
-        "New issue: A title example http://example.org #BCDev")
+    tweet._twitter_client.create_tweet.assert_called_with(
+        text="New issue: A title example http://example.org #BCDev")
     mock_twitter_config.assert_called_once_with()
 
 
@@ -118,11 +118,11 @@ def test_status_creation_1_char_longer_max_status_length(
 def test_multiple_calls_to_update_status(mock_twitter_config, tweet):
     mock_twitter_config.return_value = TWITTER_CONFIG
     tweet.tweet_new_issue("http://example.org", "A title example")
-    tweet._api.update_status.assert_called_with(
-        "New issue: A title example http://example.org #BCDev")
+    tweet._twitter_client.create_tweet.assert_called_with(
+       text="New issue: A title example http://example.org #BCDev")
     tweet.tweet_new_issue("http://example2.org", "Title 2 example")
-    tweet._api.update_status.assert_called_with(
-        "New issue: Title 2 example http://example2.org #BCDev")
+    tweet._twitter_client.create_tweet.assert_called_with(
+        text="New issue: Title 2 example http://example2.org #BCDev")
     mock_twitter_config.assert_called_once_with()
 
 
@@ -136,8 +136,8 @@ def test_url_length_config_not_found(mock_twitter_config, tweet):
 def test_https_link(mock_twitter_config, tweet):
     mock_twitter_config.return_value = TWITTER_CONFIG
     tweet.tweet_new_issue("https://example.org", "A title example")
-    tweet._api.update_status.assert_called_with(
-        "New issue: A title example https://example.org #BCDev")
+    tweet._twitter_client.create_tweet.assert_called_with(
+        text="New issue: A title example https://example.org #BCDev")
     mock_twitter_config.assert_called_once_with()
 
 

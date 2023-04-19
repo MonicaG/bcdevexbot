@@ -4,5 +4,4 @@ PyYAML>=6.0
 requests>=2.28.2
 responses>=0.23.1
 tweepy>=4.13.0
-urllib3>=1.26.15 #added to force security updated. Requests and responses require this but it wasn't been updated by them
-
+certifi>=2022.12.7 # bump certifi for securtiy update, as requests has not updated it yet

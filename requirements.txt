@@ -6,8 +6,10 @@
 #
 attrs==20.3.0
     # via pytest
-certifi==2018.11.29
-    # via requests
+certifi==2022.12.7
+    # via
+    #   -r requirements.in
+    #   requests
 charset-normalizer==2.0.9
     # via requests
 idna==2.8
@@ -50,6 +52,5 @@ types-pyyaml==6.0.12.8
     # via responses
 urllib3==1.26.15
     # via
-    #   -r requirements.in
     #   requests
     #   responses
