@@ -24,18 +24,19 @@ class Twitter:
     ELLIPSIS = u"\u2026"
 
     def __init__(self, twitter_credentials, twitter_config_store):
-        auth = tweepy.OAuthHandler(twitter_credentials['consumer_key'],
-                                   twitter_credentials['consumer_secret'])
-        auth.set_access_token(twitter_credentials['access_token'],
-                              twitter_credentials['access_token_secret'])
-        self._api = tweepy.API(auth)
+        self._twitter_client = tweepy.Client(
+            consumer_key=twitter_credentials['consumer_key'],
+            consumer_secret=twitter_credentials['consumer_secret'],
+            access_token=twitter_credentials['access_token'],
+            access_token_secret=twitter_credentials['access_token_secret'])
         self._twitter_config_store = twitter_config_store
         self._twitter_config = dict()
 
     def tweet_new_issue(self, url, title):
         status = self._create_status(url, title, "New issue:")
-        self._api.update_status(status)
+        response = self._twitter_client.create_tweet(text=status)
         logger.info("Tweeted " + status)
+        logger.info(f"https://twitter.com/user/status/{response.data['id']}")
 
     def _create_status(self, url, title, prefix):
         """
