@@ -116,8 +116,10 @@ class BCDevExchangeIssues:
     def __init__(self):
         swu = SprintWithUsOpportunity()
         cwu = CodeWithUsOpportunity()
+        twu = TeamWithUsOpportunity()
         self._data = swu.get_opportunities()
         self._data.extend(cwu.get_opportunities())
+        self._data.extend(twu.get_opportunities())
 
     def get_opportunities(self):
         return self._data
@@ -214,6 +216,17 @@ class CodeWithUsOpportunity(AbstractBCDevExchangeOpportunity):
     @property
     def opportunity_url_base(self):
         return 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/'  # noqa: E501
+
+
+class TeamWithUsOpportunity(AbstractBCDevExchangeOpportunity):
+
+    @property
+    def api_url(self):
+        return 'https://marketplace.digital.gov.bc.ca/api/opportunities/team-with-us/'  # noqa: E501
+
+    @property
+    def opportunity_url_base(self):
+        return 'https://marketplace.digital.gov.bc.ca/opportunities/team-with-us/'  # noqa: E501
 
 
 class Base:

@@ -1,0 +1,30 @@
+[
+    {
+        "id":"ffe3be71-bd4b-4b90-ab41-ec9147be4a3f",
+        "createdAt":"2023-06-26T23:26:19.424Z",
+        "versionId":"33b36dc0-d203-41c0-a8f6-f79bb7b1619a",
+        "updatedAt":"2023-06-30T18:30:59.995Z",
+        "title":"First TWU Issue",
+        "teaser":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n",
+        "remoteOk":true,
+        "location":"Victoria",
+        "maxBudget":500000,
+        "proposalDeadline":"2023-07-18T23:00:00.000Z",
+        "status":"PUBLISHED",
+        "serviceArea":"FULL_STACK_DEVELOPER"
+    },
+    {
+        "id":"d111be71-bd4b-8893-ab41-3c9143ae445b",
+        "createdAt":"2023-06-26T23:26:19.424Z",
+        "versionId":"33b36dc0-d203-41c0-a8f6-f79bb7b1619a",
+        "updatedAt":"2023-06-30T18:30:59.995Z",
+        "title":"Second TWU Issue",
+        "teaser":"Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. In ante metus dictum at tempor commodo. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.\n",
+        "remoteOk":true,
+        "location":"Victoria",
+        "maxBudget":500000,
+        "proposalDeadline":"2023-07-18T23:00:00.000Z",
+        "status":"PUBLISHED",
+        "serviceArea":"FULL_STACK_DEVELOPER"
+    }
+]

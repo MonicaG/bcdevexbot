@@ -32,18 +32,22 @@ def config_setup():
 @patch('bot.persistence.DataStore.save')
 def test_one_issue_already_seen(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file, \
             open('tests/data/one_issue_swu.json', encoding='utf-8') \
             as swu_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
         data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
 
         mock_seen_issues.return_value = ['58c9a3c1aa383e001d84d406']
         twitter_bot = bot.BCDevExBot(config_setup)
@@ -60,18 +64,23 @@ def test_one_issue_already_seen(
 @patch('bot.persistence.DataStore.save')
 def test_one_issue_not_seen(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file, \
             open('tests/data/one_issue_swu.json', encoding='utf-8') \
             as swu_file:
+
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
         data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
 
         mock_seen_issues.return_value = [100]
         twitter_bot = bot.BCDevExBot(config_setup)
@@ -90,18 +99,22 @@ def test_one_issue_not_seen(
 @patch('bot.persistence.DataStore.save')
 def test_two_issue_not_seen(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file, \
             open('tests/data/two_issues_swu.json', encoding='utf-8')\
             as swu_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
         data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
 
         mock_seen_issues.return_value = [100]
         twitter_bot = bot.BCDevExBot(config_setup)
@@ -124,18 +137,22 @@ def test_two_issue_not_seen(
 @patch('bot.persistence.DataStore.save')
 def test_two_issue_one_not_seen(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file, \
             open('tests/data/two_issues_swu.json', encoding='utf-8') \
             as swu_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
         data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
 
         mock_seen_issues.return_value = ['58c9a3c1aa383e001d84d406']
         twitter_bot = bot.BCDevExBot(config_setup)
@@ -153,17 +170,20 @@ def test_two_issue_one_not_seen(
 @patch('bot.persistence.DataStore.save')
 def test_no_issues(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
-            open('tests/data/no_issues.json', encoding='utf-8') as swu_file:
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file:
+
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
-        data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        twu = models.TeamWithUsOpportunity()
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
-                      json=data_swu, status=200)
+                      json=data_empty, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
         mock_seen_issues.return_value = []
         twitter_bot = bot.BCDevExBot(config_setup)
         twitter_bot.process()
@@ -222,18 +242,22 @@ def test_error_sending_tweet(
     Expected results: Second issue is processed and its id is stored.  First
     issue's id is not stored.
     """
-    with open('tests/data/no_issues.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/no_issues.json', encoding='utf-8') \
+            as empty_file, \
             open('tests/data/two_issues_swu.json', encoding='utf-8') \
             as swu_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
         data_swu = json.load(swu_file)
-        data_cwu = json.load(cwu_file)
+        data_empty = json.load(empty_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
-                      json=data_cwu, status=200)
+                      json=data_empty, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_empty, status=200)
 
         mock_seen_issues.return_value = []
         mock_tweet.side_effect = tweeting_raises_exception_side_effect
@@ -264,17 +288,25 @@ def tweeting_raises_exception_side_effect(*args, **kwargs):
 def test_only_published_status_are_processed(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
     with open('tests/data/three_issues_cwu.json', encoding='utf-8') \
-            as cwu_file, open('tests/data/three_issues_swu.json',
-                              encoding='utf-8') as swu_file:
+            as cwu_file, \
+            open('tests/data/three_issues_swu.json', encoding='utf-8') \
+            as swu_file, \
+            open('tests/data/no_issues.json', encoding='utf-8') \
+            as twu_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
+
         data_swu = json.load(swu_file)
         data_cwu = json.load(cwu_file)
+        data_twu = json.load(twu_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
                       json=data_cwu, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_twu, status=200)
 
         mock_seen_issues.return_value = \
             ['04003a5f-f609-469f-91bb-f3c6ac56bed7']
@@ -299,21 +331,31 @@ def test_only_published_status_are_processed(
 @patch('bot.persistence.DataStore.save')
 def test_bad_status_is_not_processed(
         mock_save_issues, mock_seen_issues, mock_tweet, config_setup):
-    with open('tests/data/one_issue_cwu.json', encoding='utf-8') as cwu_file, \
+    with open('tests/data/one_issue_cwu.json', encoding='utf-8') \
+            as cwu_file, \
+            open('tests/data/one_issue_twu.json', encoding='utf-8') \
+            as twu_file, \
             open('tests/data/unknown_status.json', encoding='utf-8') \
             as unknown_file:
         swu = models.SprintWithUsOpportunity()
         cwu = models.CodeWithUsOpportunity()
+        twu = models.TeamWithUsOpportunity()
+
         data_swu = json.load(unknown_file)
         data_cwu = json.load(cwu_file)
+        data_twu = json.load(twu_file)
 
         responses.add(responses.GET, swu.api_url,
                       json=data_swu, status=200)
         responses.add(responses.GET, cwu.api_url,
                       json=data_cwu, status=200)
+        responses.add(responses.GET, twu.api_url,
+                      json=data_twu, status=200)
 
         mock_seen_issues.return_value = \
-            ['f1f6aca3-7143-41bc-99a7-8ce7014ac242']
+            ['f1f6aca3-7143-41bc-99a7-8ce7014ac242',
+             'ffe3be71-bd4b-4b90-ab41-ec9147be4a3f'
+             ]
         twitter_bot = bot.BCDevExBot(config_setup)
         twitter_bot.process()
 
@@ -321,4 +363,5 @@ def test_bad_status_is_not_processed(
         calls = []
         mock_tweet.assert_has_calls(calls)
         mock_save_issues.assert_called_once_with(
-            ['f1f6aca3-7143-41bc-99a7-8ce7014ac242'])
+            ['f1f6aca3-7143-41bc-99a7-8ce7014ac242',
+             'ffe3be71-bd4b-4b90-ab41-ec9147be4a3f'])
