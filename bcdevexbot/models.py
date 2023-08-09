@@ -161,12 +161,17 @@ class AbstractBCDevExchangeOpportunity(ABC):
     def status_eval_scneario(self):
         return "EVAL_SCENARIO"
 
+    @property
+    def status_eval_c(self):
+        return "EVAL_C"
+
     def is_status_closed(self, status):
         return status == self.status_closed \
                 or status == self.status_evaluation \
                 or status == self.status_eval_questions \
                 or status == self.status_eval_cc \
-                or status == self.status_eval_scneario
+                or status == self.status_eval_scneario \
+                or status == self.status_eval_c
 
     def is_status_open(self, status):
         return status == self.status_open
