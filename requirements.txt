@@ -7,9 +7,7 @@
 attrs==20.3.0
     # via pytest
 certifi==2023.7.22
-    # via
-    #   -r requirements.in
-    #   requests
+    # via requests
 charset-normalizer==2.0.9
     # via requests
 idna==2.8
