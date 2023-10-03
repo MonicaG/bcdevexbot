@@ -48,7 +48,7 @@ tweepy==4.13.0
     # via -r requirements.in
 types-pyyaml==6.0.12.8
     # via responses
-urllib3==1.26.15
+urllib3==1.26.17
     # via
     #   requests
     #   responses
