@@ -2,6 +2,8 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: bcdevexbot
+permissions:
+  contents: read
 
 on:
   push:
@@ -26,7 +28,7 @@ jobs:
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
-      uses: py-actions/flake8@v2
+      uses: py-actions/flake8@84ec6726560b6d5bd68f2a5bed83d62b52bb50ba
     - name: Test with pytest
       run: |
         pytest

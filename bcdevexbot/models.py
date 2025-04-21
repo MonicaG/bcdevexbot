@@ -205,22 +205,22 @@ class SprintWithUsOpportunity(AbstractBCDevExchangeOpportunity):
 
     @property
     def api_url(self):
-        return 'https://digital.gov.bc.ca/marketplace/api/opportunities/sprint-with-us/'  # noqa: E501
+        return 'https://marketplace.digital.gov.bc.ca/api/opportunities/sprint-with-us/'  # noqa: E501
 
     @property
     def opportunity_url_base(self):
-        return 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/'  # noqa: E501
+        return 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/'  # noqa: E501
 
 
 class CodeWithUsOpportunity(AbstractBCDevExchangeOpportunity):
 
     @property
     def api_url(self):
-        return 'https://digital.gov.bc.ca/marketplace/api/opportunities/code-with-us/'  # noqa: E501
+        return 'https://marketplace.digital.gov.bc.ca/api/opportunities/code-with-us/'  # noqa: E501
 
     @property
     def opportunity_url_base(self):
-        return 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/'  # noqa: E501
+        return 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/'  # noqa: E501
 
 
 class TeamWithUsOpportunity(AbstractBCDevExchangeOpportunity):
