@@ -89,7 +89,7 @@ def test_one_issue_not_seen(
         assert mock_seen_issues.called
         mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406'])
         mock_tweet.assert_called_once_with(
-            'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
+            'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
             'First Issue')
 
 
@@ -121,9 +121,9 @@ def test_two_issue_not_seen(
         twitter_bot.process()
 
         assert mock_seen_issues.called
-        calls = [call('https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
+        calls = [call('https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
                       'First Issue'),
-                 call('https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
+                 call('https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
                       'Second Issue')
                  ]
         mock_tweet.assert_has_calls(calls)
@@ -159,7 +159,7 @@ def test_two_issue_one_not_seen(
         twitter_bot.process()
 
         assert mock_seen_issues.called
-        mock_tweet.assert_called_once_with('https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
+        mock_tweet.assert_called_once_with('https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
                                            'Second Issue')
         mock_save_issues.assert_called_once_with(['58c9a3c1aa383e001d84d406', '58c72cf8aa383e001d84d3fb'])  # noqa: E501
 
@@ -265,9 +265,9 @@ def test_error_sending_tweet(
         twitter_bot.process()
 
         assert mock_seen_issues.called
-        calls = [call('https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
+        calls = [call('https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406',  # noqa: E501
                       'First Issue'),
-                 call('https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
+                 call('https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb',  # noqa: E501
                       'Second Issue')
                  ]
         mock_tweet.assert_has_calls(calls)
@@ -275,7 +275,7 @@ def test_error_sending_tweet(
 
 
 def tweeting_raises_exception_side_effect(*args, **kwargs):
-    if args[0] == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406':  # noqa: E501
+    if args[0] == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406':  # noqa: E501
         raise Exception('Boom')
     else:
         return None
@@ -316,7 +316,7 @@ def test_only_published_status_are_processed(
         assert mock_seen_issues.called
         calls = [
                 call(
-                    'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242',  # noqa: E501
+                    'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242',  # noqa: E501
                     'First CWU Issue')
                  ]
         mock_tweet.assert_has_calls(calls)

@@ -47,7 +47,7 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             assert len(open_issues) == 1
             issue_id, url, title = open_issues[0]
             assert issue_id == '58c9a3c1aa383e001d84d406'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
             assert title == 'First Issue'
 
     @responses.activate
@@ -72,12 +72,12 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             assert len(open_issues) == 2
             issue_id, url, title = open_issues[0]
             assert issue_id == '58c9a3c1aa383e001d84d406'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
             assert title == 'First Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == '58c72cf8aa383e001d84d3fb'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
             assert title == 'Second Issue'
 
     @responses.activate
@@ -106,17 +106,17 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             assert len(open_issues) == 4
             issue_id, url, title = open_issues[0]
             assert issue_id == '58c9a3c1aa383e001d84d406'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
             assert title == 'First Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == '58c72cf8aa383e001d84d3fb'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
             assert title == 'Second Issue'
 
             issue_id, url, title = open_issues[2]
             assert issue_id == 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
             assert title == 'First CWU Issue'
 
             issue_id, url, title = open_issues[3]
@@ -152,22 +152,22 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             assert len(open_issues) == 6
             issue_id, url, title = open_issues[0]
             assert issue_id == '58c9a3c1aa383e001d84d406'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
             assert title == 'First Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == '58c72cf8aa383e001d84d3fb'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c72cf8aa383e001d84d3fb'  # noqa: E501
             assert title == 'Second Issue'
 
             issue_id, url, title = open_issues[2]
             assert issue_id == 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
             assert title == 'First CWU Issue'
 
             issue_id, url, title = open_issues[3]
             assert issue_id == 'd2a6aca3-7143-41bc-99a7-8ce7014ac3af'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
             assert title == 'Second CWU Issue'
 
             issue_id, url, title = open_issues[4]
@@ -207,17 +207,17 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             assert len(open_issues) == 5
             issue_id, url, title = open_issues[0]
             assert issue_id == '58c9a3c1aa383e001d84d406'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/58c9a3c1aa383e001d84d406'  # noqa: E501
             assert title == 'First Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
             assert title == 'First CWU Issue'
 
             issue_id, url, title = open_issues[2]
             assert issue_id == 'd2a6aca3-7143-41bc-99a7-8ce7014ac3af'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
             assert title == 'Second CWU Issue'
 
             issue_id, url, title = open_issues[3]
@@ -258,12 +258,12 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
 
             issue_id, url, title = open_issues[0]
             assert issue_id == 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
             assert title == 'First CWU Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == 'd2a6aca3-7143-41bc-99a7-8ce7014ac3af'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/d2a6aca3-7143-41bc-99a7-8ce7014ac3af'  # noqa: E501
             assert title == 'Second CWU Issue'
 
             issue_id, url, title = open_issues[2]
@@ -326,12 +326,12 @@ class BCDevExchangeIssuesTests(unittest.TestCase):
             issue_id, url, title = open_issues[0]
             assert issue_id == '04003a5f-f609-469f-91bb-f3c6ac56bed7'
             assert url == \
-                'https://digital.gov.bc.ca/marketplace/opportunities/sprint-with-us/04003a5f-f609-469f-91bb-f3c6ac56bed7'  # noqa: E501
+                'https://marketplace.digital.gov.bc.ca/opportunities/sprint-with-us/04003a5f-f609-469f-91bb-f3c6ac56bed7'  # noqa: E501
             assert title == 'Third Issue'
 
             issue_id, url, title = open_issues[1]
             assert issue_id == 'f1f6aca3-7143-41bc-99a7-8ce7014ac242'
-            assert url == 'https://digital.gov.bc.ca/marketplace/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
+            assert url == 'https://marketplace.digital.gov.bc.ca/opportunities/code-with-us/f1f6aca3-7143-41bc-99a7-8ce7014ac242'  # noqa: E501
             assert title == 'First CWU Issue'
 
             issue_id, url, title = open_issues[2]
